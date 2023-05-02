@@ -1,0 +1,183 @@
+.container {
+  margin-left: 12.5rem; /* side-navbar genişliği kadar boşluk bırak */
+}
+.MainContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.Label{
+  background-color: #222942;
+  background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
+  color: #fff!important;
+  padding: 0.6rem 0;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.Title{
+  background: transparent;
+  margin-left: 10px;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 260px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 23%;
+  margin-bottom: 20px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #161f36;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card .cardIcon{
+    height: 50px;
+    width: 50px;
+}
+
+.card h3 {
+  color: #d5d5d5;
+  text-decoration: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+}
+
+.cardBottomLine {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+}
+img.card-icon {
+    height: 25px;
+    width: 25px;
+}
+.ColumnOne{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.ColumnTwo{
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    margin-right: 100px;
+}
+.InfoContainer{
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #161f36;;
+    background-clip: border-box;
+    margin: 10px;
+    border: none;
+    border-radius: 0.15rem;
+    box-shadow: -8px 12px 20px 0 #11151a!important;
+}
+.InfoContainer img{
+    height: 256px;
+    width: 256px;
+
+}
+.RoleInfo{
+  text-align: center;
+  padding-top: 50px;
+}
+.InfoContainer .InfoText{
+    text-align: center;
+}
+.InfoContainer .AgentThumbnail{
+    border-radius: 50px;
+}
+.InfoContainer .textGray{
+    color: #93949d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.InfoContainer .textGray .textRight {
+    text-align: right;
+}
+.AgentInfo{
+    display: flex;
+    min-height: 1px;
+    background-color: #172038;
+    background-clip: border-box;
+    margin: 10px;
+    border: none;
+    border-radius: 0.15rem;
+    box-shadow: -8px 12px 20px 0 #11151a!important;
+}
+.AgentInfo .AgentPic img{
+    height: 270px;
+    width: 230px;
+}
+.AgentInfo .RoleInfo img{
+    height: 25px;
+    width: 25px;
+}
+
+.AgentInfo .RoleText{
+    color:#93949d;
+    text-align: center;
+    display: flex;
+}
+.AbilitiesContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #172038;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.15rem;
+    box-shadow: -8px 12px 20px 0 #11151a!important;
+    text-align: center;
+}
+.abilityRow{
+  background-color: #172038;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0.15rem;
+  box-shadow: -8px 12px 20px 0 #11151a!important;
+  padding: 25px;
+}
+.AbilitiesContainer h3{
+    color: #afff46;
+    background: transparent;
+}
+.textRight audio {
+  height: 17px;
+  padding-left: 45px;
+}
+.AbilitiesContainer video{
+    height: 200px;
+    width: 300px;
+}
+.AbilitiesContainer img{
+    height: 30px;
+    width: 30px;
+}

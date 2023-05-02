@@ -1,0 +1,49 @@
+.sideNavbar {
+    /* Kenar çubuğu için stiller */
+    width: 12.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(72deg, #172038 10%, #10151e 100%);
+}
+  
+.navList {
+    /* Navigasyon listesi için stiller */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.menuTitle {
+    /* Menü başlığı için stiller */
+    color: #e74a3b;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+  
+.submenu {
+    /* Alt menü için stiller */
+    list-style-type: none;
+    padding: 0;
+}
+  
+.sidebarDivider {
+    /* Kenar çubuğu bölücüsü için stiller */
+    border: none;
+    margin: 0 1rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu a {
+    display: block;
+    color: #ccc;
+    font-size: 13.6px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+  
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
