@@ -9,7 +9,7 @@ const PaketlerPage = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('https://valorantgame.com.tr/api/bundles?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/bundles?populate=*');
             const data = await response.json();
             setBundles(data.data);
         }

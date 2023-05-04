@@ -12,7 +12,7 @@ const MapPage = () => {
         if (!slug) return;
 
         async function fetchMap() {
-            const response = await fetch(`https://valorantgame.com.tr/api/maps?populate=*`);
+            const response = await fetch(`https://api.valorantgame.com.tr/api/maps?populate=*`);
             const data = await response.json();
             const foundMap = data.data.find(m => m.attributes.map_name.toLowerCase().replace(/\s+/g, '') === slug.toLowerCase());
             setMap(foundMap);

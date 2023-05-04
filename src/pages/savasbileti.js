@@ -32,7 +32,7 @@ const SavasBileti = ({ battlepasses }) => {
 };
 
 export async function getStaticProps() {
-    const response = await fetch('https://valorantgame.com.tr/api/battlepasses?populate=*');
+    const response = await fetch('https://api.valorantgame.com.tr/api/battlepasses?populate=*');
     const data = await response.json();
     const battlepasses = data.data;
 

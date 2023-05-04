@@ -10,7 +10,7 @@ const PaketlerSlugPage = () => {
 
     useEffect(() => {
         async function fetchBundle() {
-            const response = await fetch('https://valorantgame.com.tr/api/bundles?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/bundles?populate=*');
             const data = await response.json();
             const foundBundle = data.data.find(
                 (b) =>

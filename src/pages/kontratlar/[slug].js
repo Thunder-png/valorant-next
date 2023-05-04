@@ -11,7 +11,7 @@ const KontratlarSlugPage = () => {
 
     useEffect(() => {
         async function fetchContract() {
-            const response = await fetch('https://valorantgame.com.tr/api/contracts?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/contracts?populate=*');
             const data = await response.json();
             const foundContract = data.data.find(c => c.attributes.contract_name.replace(/ /g, '-').toLowerCase() === slug.toLowerCase());
             setContract(foundContract);

@@ -9,7 +9,7 @@ const AgentsPage = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('https://valorantgame.com.tr/api/agents?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/agents?populate=*');
             const data = await response.json();
             setAgents(data.data);
         }

@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("https://valorantgame.com.tr/api/ana-sayfa?populate=*");
+      const response = await fetch("https://api.valorantgame.com.tr/api/ana-sayfa?populate=*");
       const data = await response.json();
       setMainElements(data.data.attributes.main_element);
     }

@@ -9,7 +9,7 @@ const CrosshairPage = () => {
 
     useEffect(() => {
         async function fetchCrosshairs() {
-            const response = await fetch('https://valorantgame.com.tr/api/crosshairs?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/crosshairs?populate=*');
             const data = await response.json();
             setCrosshairs(data.data);
         }

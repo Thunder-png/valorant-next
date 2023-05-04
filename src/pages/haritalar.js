@@ -8,7 +8,7 @@ const HaritalarPage = () => {
 
     useEffect(() => {
         async function fetchMaps() {
-            const response = await fetch('https://valorantgame.com.tr/api/maps?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/maps?populate=*');
             const data = await response.json();
             setMaps(data.data);
         }

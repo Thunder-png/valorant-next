@@ -7,7 +7,7 @@ const NewsPage = () => {
 
     useEffect(() => {
         async function fetchNews() {
-            const response = await fetch('https://valorantgame.com.tr/api/newss?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/newss?populate=*');
             const data = await response.json();
             setNewsList(data.data);
         }

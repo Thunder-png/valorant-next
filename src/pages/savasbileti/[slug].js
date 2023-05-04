@@ -10,7 +10,7 @@ const SavasBiletiSlugPage = () => {
 
     useEffect(() => {
         async function fetchBattlepass() {
-            const response = await fetch('https://valorantgame.com.tr/api/battlepasses?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/battlepasses?populate=*');
             const data = await response.json();
             const foundBattlepass = data.data.find(bp => bp.attributes.battlepass_name.replace(/ /g, '-').toLowerCase() === slug.toLowerCase());
             setBattlepass(foundBattlepass);

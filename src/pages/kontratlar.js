@@ -7,7 +7,7 @@ const KontratlarPage = () => {
 
     useEffect(() => {
         async function fetchContracts() {
-            const response = await fetch('https://valorantgame.com.tr/api/contracts?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/contracts?populate=*');
             const data = await response.json();
             setContracts(data.data);
         }

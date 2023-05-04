@@ -97,7 +97,7 @@ const AgentPage = ({ agent }) => {
 };
 
 export async function getStaticPaths() {
-    const res = await fetch('https://valorantgame.com.tr/api/agents?populate=*');
+    const res = await fetch('https://api.valorantgame.com.tr/api/agents?populate=*');
     const data = await res.json();
     const agents = data.data;
 
@@ -109,7 +109,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch('https://valorantgame.com.tr/api/agents?populate=*');
+    const res = await fetch('https://api.valorantgame.com.tr/api/agents?populate=*');
     const data = await res.json();
     const agents = data.data;
 

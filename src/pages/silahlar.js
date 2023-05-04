@@ -9,7 +9,7 @@ const SilahlarPage = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('https://valorantgame.com.tr/api/weapons?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/weapons?populate=*');
             const data = await response.json();
             const filteredWeapons = data.data.filter(weapon => weapon.attributes.weapon_skin === 'Plain');
             setWeapons(filteredWeapons);
