@@ -1,5 +1,6 @@
 // pages/ajanlar.js
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 import styles from '../components/Agents.module.css';
@@ -33,10 +34,10 @@ const AgentsPage = () => {
 
                     return (
                         <div key={agent.id} className={styles.card}>
-                            <a href={`/ajanlar/${formattedTitle}`}>
+                            <Link href={`/ajanlar/${formattedTitle}`}>
                                 <h2>{agent.attributes.agent_name}</h2>
                                 <img src={agent.attributes.agent_thumb} alt={agent.attributes.agent_name} />
-                            </a>
+                            </Link>
                             <img className={styles.cardIcon} src={agent.attributes.ajan_rolue.data.attributes.agent_role_icon} alt="Agent Role Icon" />
                             <p>{displayDescription}</p>
                         </div>

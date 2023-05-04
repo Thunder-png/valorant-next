@@ -1,5 +1,6 @@
 // pages/paketler.js
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 import styles from '../components/Weapons.module.css';
@@ -29,11 +30,11 @@ const PaketlerPage = () => {
 
                     return (
                         <div key={bundle.id} className={styles.card}>
-                            <a href={`/paketler/${formattedTitle}`}>
+                            <Link href={`/paketler/${formattedTitle}`}>
                                 <img src={bundle.attributes.bundle_img} alt={bundle.attributes.bundle_name} />
                                 <h2>{bundle.attributes.bundle_name}</h2>
                                 <div className={styles.cardBottomLine}></div>
-                            </a>
+                            </Link>
                         </div>
                     );
                 })}

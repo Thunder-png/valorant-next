@@ -1,5 +1,6 @@
 // pages/silahlar.js
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 import styles from '../components/Weapons.module.css';
@@ -30,12 +31,12 @@ const SilahlarPage = () => {
 
                     return (
                         <div key={weapon.id} className={styles.card}>
-                            <a href={`/silahlar/${formattedTitle}`}>
+                            <Link href={`/silahlar/${formattedTitle}`}>
                                 <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} />
                                 <h3>{weapon.attributes.weapon_name}</h3>
                                 <div className={styles.cardBottomLine}>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     );
                 })}

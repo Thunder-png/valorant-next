@@ -1,5 +1,6 @@
 // components/CardContainer.js
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import styles from './CardContainer.module.css';
 
 const CardContainer = () => {
@@ -20,10 +21,10 @@ const CardContainer = () => {
                 const formattedTitle = element.main_title.toLowerCase().replace(/\s+/g, '');
                 return (
                     <div key={element.id} className={styles.card}>
-                        <a href={`/${formattedTitle}`}>
+                        <Link href={`/${formattedTitle}`}>
                             <h3>{element.main_title}</h3>
                             <img src={element.main_url} alt={element.main_title} />
-                        </a>
+                        </Link>
                         <div className={styles.cardBottomLine}></div>
                     </div>
                 );

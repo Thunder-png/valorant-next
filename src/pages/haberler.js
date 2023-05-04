@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 
@@ -26,7 +27,7 @@ const NewsPage = () => {
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                         {newsList.map((news) => (
                             <div key={news.id} className="col">
-                                <a href={news.attributes.news_link} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
+                                <Link href={news.attributes.news_link} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
                                     <div className="card h-100">
                                         <img src={news.attributes.news_img} alt={`Haber ${news.id}`} className="card-img-top" />
                                         <div className="card-body">
@@ -34,7 +35,7 @@ const NewsPage = () => {
                                             <p className="card-text">{news.attributes.news_description}</p>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>

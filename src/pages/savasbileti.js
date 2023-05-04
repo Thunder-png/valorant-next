@@ -1,3 +1,4 @@
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 
@@ -14,14 +15,14 @@ const SavasBileti = ({ battlepasses }) => {
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                         {battlepasses.map((battlepass) => (
                             <div key={battlepass.id} className="col">
-                                <a href={`/savasbileti/${battlepass.attributes.battlepass_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">
+                                <Link href={`/savasbileti/${battlepass.attributes.battlepass_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">
                                     <div className="card h-100">
                                         <img src={battlepass.attributes.battlepass_img} alt={battlepass.attributes.battlepass_name} className="card-img-top" />
                                         <div className="card-body">
                                             <h3 className="card-title">{battlepass.attributes.battlepass_name}</h3>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 
@@ -26,14 +27,14 @@ const KontratlarPage = () => {
                     <div className="row row-cols-1 row-cols-md-3 g-4">
                         {contracts.map((contract) => (
                             <div key={contract.id} className="col">
-                                <a href={`/kontratlar/${contract.attributes.contract_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">
+                                <Link href={`/kontratlar/${contract.attributes.contract_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">
                                     <div className="card h-100">
                                         <img src={contract.attributes.contract_img} alt={contract.attributes.contract_name} className="card-img-top" />
                                         <div className="card-body">
                                             <h3 className="card-title">{contract.attributes.contract_name}</h3>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>
