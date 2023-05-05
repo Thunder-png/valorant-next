@@ -1,6 +1,6 @@
 import React from "react";
 import FontAwesomeIcon from "./FontAwesomeIcon";
-import { faHouse, faNewspaper, faUserFriends, faCrosshairs, faLayerGroup, faMedal, faDollarSign, faHourglassClock, faFolderMusic, faLocationCrosshairs, faMap, faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faNewspaper, faUserFriends, faCrosshairs, faLayerGroup, faMedal, faDollarSign, faHourglassClock, faMusic, faLocationCrosshairs, faMap, faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SideBar.module.css";
 import Link from "next/link"; // Link bileşenini içe aktar
 
@@ -31,7 +31,7 @@ const SideBar = () => {
                             <li><Link href="/paketler"><FontAwesomeIcon icon={faLayerGroup} /> Koleksiyon</Link></li>
                             <li><Link href="/savasbileti"><FontAwesomeIcon icon={faMedal} /> Savaş Bileti</Link></li>
                             <li><Link href="/kontratlar"><FontAwesomeIcon icon={faDollarSign} /> Kontratlar</Link></li>
-                            <li><Link href="/oyucusesleri"><FontAwesomeIcon icon={faFolderMusic} /> Oyuncu Sesleri</Link></li>
+                            <li><Link href="/oyucusesleri"><FontAwesomeIcon icon={faMusic} /> Oyuncu Sesleri</Link></li>
                             <li><Link href="/crosshair"><FontAwesomeIcon icon={faLocationCrosshairs} /> Crosshair</Link></li>
                             <li><Link href="/haritalar"><FontAwesomeIcon icon={faMap} /> Haritalar</Link></li>
                         </ul>
