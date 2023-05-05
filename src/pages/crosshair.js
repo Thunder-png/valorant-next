@@ -17,6 +17,17 @@ const CrosshairPage = () => {
         fetchCrosshairs();
     }, []);
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text).then(
+            () => {
+                alert('Crosshair kodu panoya kopyalandı!');
+            },
+            (err) => {
+                alert('Crosshair kodu kopyalanamadı:', err);
+            }
+        );
+    };
+
     return (
         <div className={styles.container}>
             <TopBar />
@@ -25,7 +36,9 @@ const CrosshairPage = () => {
                 {crosshairs.map((crosshair) => (
                     <div key={crosshair.id} className={styles.crosshairCard}>
                         <img src={crosshair.attributes.crosshair_img} alt={`Crosshair ${crosshair.id}`} />
-                        <p>{crosshair.attributes.crosshair_code}</p>
+                        <button className={styles.clipboard} onClick={() => copyToClipboard(crosshair.attributes.crosshair_code)}>
+                            Panoya Kopyala
+                        </button>
                     </div>
                 ))}
             </div>

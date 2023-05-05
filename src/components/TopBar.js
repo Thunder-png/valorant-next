@@ -1,11 +1,12 @@
 import React from "react";
+import Link from "next/link"; // Link bileşenini içe aktar
 import styles from "./TopBar.module.css";
 
 const TopBar = () => {
     return (
         <div className={styles.topBar}>
             <div className={styles.logo}>
-                <a href="index.html">ValorantGame</a>
+                <Link href="/">ValorantGame</Link>
             </div>
             <div className={styles.searchContainer}>
                 <input

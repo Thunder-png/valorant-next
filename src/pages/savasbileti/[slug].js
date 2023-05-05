@@ -25,7 +25,7 @@ const SavasBiletiSlugPage = () => {
             <TopBar />
             <div className="row">
                 <div className="col-12">
-                    <h1 className="my-4">{slug ? slug.replace(/-/g, ' ') : 'Savaş Bileti'}</h1>
+                    <h1 className="my-5">{slug ? slug.replace(/-/g, ' ') : 'Savaş Bileti'}</h1>
                 </div>
             </div>
             <div className="row">

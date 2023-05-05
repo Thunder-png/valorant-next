@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['valorantfiles.com'],
+    domains: ['valorantfiles.com', 'api.valorantgame.com.tr'],
   },
 };
 

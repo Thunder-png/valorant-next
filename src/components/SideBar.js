@@ -31,7 +31,7 @@ const SideBar = () => {
                             <li><Link href="/paketler"><FontAwesomeIcon icon={faLayerGroup} /> Koleksiyon</Link></li>
                             <li><Link href="/savasbileti"><FontAwesomeIcon icon={faMedal} /> Savaş Bileti</Link></li>
                             <li><Link href="/kontratlar"><FontAwesomeIcon icon={faDollarSign} /> Kontratlar</Link></li>
-                            <li><Link href="/oyucusesleri"><FontAwesomeIcon icon={faMusic} /> Oyuncu Sesleri</Link></li>
+                            <li><Link href="/sesler"><FontAwesomeIcon icon={faMusic} /> Oyuncu Sesleri</Link></li>
                             <li><Link href="/crosshair"><FontAwesomeIcon icon={faLocationCrosshairs} /> Crosshair</Link></li>
                             <li><Link href="/haritalar"><FontAwesomeIcon icon={faMap} /> Haritalar</Link></li>
                         </ul>

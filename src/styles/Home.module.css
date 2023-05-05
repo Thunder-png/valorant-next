@@ -1,6 +1,7 @@
 .container {
   margin-left: 12.5rem; /* side-navbar genişliği kadar boşluk bırak */
 }
+
 .Label{
   background-color: #222942;
   background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);

@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
     }
+  
     .col-3, .col-md-3 {
       flex: 0 0 auto;
       width: 0!important;
@@ -100,6 +101,49 @@ const GlobalStyle = createGlobalStyle`
     *:before,
     *:after {
         box-sizing: inherit;
+    }
+    /*Savas Bileti*/
+    .col-lg-9 {
+      margin-right: 1px;
+    }
+    .my-5{
+      background-color: #222942;
+      background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
+      color: #fff;
+      padding: 0.6rem 0;
+      border-radius: 25px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      margin-top: 0rem!important;
+      margin-bottom: 1.5rem!important;
+      margin-left: -6px;
+    }
+    /*Ana Sayfa*/
+    .card{
+      margin-bottom: 10px;
+    }
+    .card-deck {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-right: 260px;
+      margin-right: 60px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 576px){
+      .card-deck{
+        display: flex;
+        flex-direction: column;
+
+      }
+    }
+    @media (min-width: 576px){
+      .card-deck .card {
+        flex: none!important;
+        margin-bottom: 10px;
+
+      }
     }
 `;
 

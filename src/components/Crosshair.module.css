@@ -1,3 +1,12 @@
 .container {
     margin-left: 12.5rem; /* side-navbar genişliği kadar boşluk bırak */
-  }
+}
+.crosshairCard img{
+  width: 400px;
+  margin-top: 10px;
+  border-style: groove;
+  box-shadow: 0 8px 32px 0 rgba(54, 67, 255, 0.1);
+}
+.crosshairCard .clipboard{
+  color:white
+}
