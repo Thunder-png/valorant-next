@@ -122,6 +122,8 @@ const GlobalStyle = createGlobalStyle`
     /*Ana Sayfa*/
     .card{
       margin-bottom: 10px;
+      margin: 10px;
+  
     }
     .card-deck {
       display: flex;
