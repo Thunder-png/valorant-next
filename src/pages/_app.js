@@ -1,4 +1,5 @@
 // pages/_app.js
+import Head from 'next/head';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 
@@ -186,6 +187,13 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>ValoranGameTr</title>
+        <meta name="description" content="Valorant Game valorant oyununa ait bilgileri bulabilrceğiniz bir web sitesi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="../../public/favicon.ico" />
+      </Head>
+
       <GlobalStyle />
       <Component {...pageProps} />
     </>
