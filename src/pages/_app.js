@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
     }
+    @media (min-width: 1400px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+
+      max-width: 1283px!important;
+      }
+    }
   
     .col-3, .col-md-3 {
       flex: 0 0 auto;
