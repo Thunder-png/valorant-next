@@ -28,11 +28,18 @@ const GlobalStyle = createGlobalStyle`
     }
     .col-md-6 {
       display: flex;
-
       width: 50%;
       border: none;
       border-radius: 0.15rem;
       box-shadow: -8px 12px 20px 0 #11151a!important;
+      flex-direction: column;
+      align-content: space-between;
+      justify-content: center;
+      align-items: center;
+    }
+    .textRight audio {
+      height: 17px;
+      padding-left: 45px;
     }
     .cardBottomLine {
       width: 100%;

@@ -42,13 +42,18 @@ const MapPage = () => {
                             <img src={attributes.map_img} alt={attributes.map_name} className="img-fluid" />
                         </div>
                         <div className="col-md-6">
-                            <p>{attributes.map_date}</p>
-                            <p>{attributes.map_region}</p>
-                            <p>{attributes.map_coord}</p>
-                            <p>{attributes.map_call_sign}</p>
-                            <p>{attributes.map_spike_site}</p>
-                            <p>{attributes.map_rotation}</p>
-                            <p>{attributes.map_theme_sound}</p>
+                            <p className='textGray'>Çıkış Tarihi: <span className='textRight'>{attributes.map_date}</span></p>
+                            <p className='textGray'>Harita Bölgesi: <span className='textRight'>{attributes.map_region}</span></p>
+                            <p className='textGray'>Koordinatlar: <span className='textRight'>{attributes.map_coord}</span></p>
+                            <p className='textGray'>Kod Adı: <span className='textRight'>{attributes.map_call_sign}</span></p>
+                            <p className='textGray'>Spike Site: <span className='textRight'>{attributes.map_spike_site}</span></p>
+                            <p className='textGray'>Rotasyon: <span className='textRight'>{attributes.map_rotation}</span></p>
+                            <p className='textGray'>Harita Sesi: <span className='textRight'>{attributes.map_theme_sound && (
+                                <audio controls>
+                                    <source src={attributes.map_theme_sound} type="audio/mpeg" />
+                                    Your browser does not support the audio tag.
+                                </audio>
+                            )}</span></p>
                         </div>
                     </div>
                     <div className="mt-4">
