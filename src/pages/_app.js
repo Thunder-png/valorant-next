@@ -40,6 +40,12 @@ const GlobalStyle = createGlobalStyle`
       min-height: 230px;
       object-fit: contain;
     }
+    .img-fluid {
+      max-width: 200px!important;
+      height: auto;
+      object-fit: contain;
+      max-height: 250px;
+    }
     .col-md-6 {
       display: flex;
       width: 50%;
