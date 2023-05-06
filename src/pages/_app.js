@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
       -webkit-backdrop-filter: blur(4px);
       margin-top: 0rem!important;
       margin-bottom: 1.5rem!important;
-      margin-left: -22px;
     }
     .col-md-6 {
       display: flex;
@@ -118,6 +117,19 @@ const GlobalStyle = createGlobalStyle`
       margin-top: 0rem!important;
       margin-bottom: 1.5rem!important;
       margin-left: -6px;
+    }
+    .mb-4{
+      background-color: #222942;
+      background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
+      color: #fff;
+      padding: 0.6rem 0;
+      border-radius: 25px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      margin-top: 0rem!important;
+      margin-bottom: 1.5rem!important;
+
     }
     /*Ana Sayfa*/
     .card{

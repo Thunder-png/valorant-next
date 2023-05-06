@@ -7,9 +7,7 @@ const SavasBileti = ({ battlepasses }) => {
         <div className="container">
             <TopBar />
             <div className="row">
-                <div className="col-md-3">
-                    <SideBar />
-                </div>
+                <SideBar />
                 <div className="col-md-9">
                     <h1 className="my-4">Savaş Bileti</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">

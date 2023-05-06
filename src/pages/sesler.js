@@ -17,9 +17,12 @@ const Sesler = () => {
 
     return (
         <>
-            <TopBar />
-            <SideBar />
+
+
             <div className={`container ${styles.container}`}>
+                <TopBar />
+                <SideBar />
+                <h1 className="my-4">Sesler</h1>
                 <div className="row">
                     {voices.map((voice) => (
                         <div key={voice.id} className="col-md-4">
