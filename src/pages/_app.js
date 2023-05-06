@@ -144,6 +144,15 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 1.5rem!important;
 
     }
+    .rowVoices {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 150px;
+      margin-left: -15px;
+    }
+    .rowVoices h5{
+      color: white;
+    }
     /*Ana Sayfa*/
     .card{
       margin-bottom: 10px;
