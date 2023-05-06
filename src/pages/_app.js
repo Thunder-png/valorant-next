@@ -33,6 +33,13 @@ const GlobalStyle = createGlobalStyle`
       margin-top: 0rem!important;
       margin-bottom: 1.5rem!important;
     }
+    .card-img, .card-img-top {
+      border-top-left-radius: var(--bs-card-inner-border-radius);
+      border-top-right-radius: var(--bs-card-inner-border-radius);
+      max-height: 250px!important;
+      min-height: 230px;
+      object-fit: contain;
+    }
     .col-md-6 {
       display: flex;
       width: 50%;
