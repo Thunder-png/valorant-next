@@ -29,9 +29,10 @@ const MapPage = () => {
     return (
         <div className="container">
             <TopBar />
+            <SideBar />
             <div className="row">
 
-                <SideBar />
+
 
                 <div className="col-md-9">
                     <div className="mb-4">
