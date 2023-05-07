@@ -33,7 +33,9 @@ const SilahlarPage = () => {
                         <div key={weapon.id} className={styles.card}>
                             <Link href={`/silahlar/${formattedTitle}`}>
                                 <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} />
-                                <h3>{weapon.attributes.weapon_name}</h3>
+                                <div className={styles.CardHead}>
+                                    <h3>{weapon.attributes.weapon_name}</h3>
+                                </div>
                                 <div className={styles.cardBottomLine}>
                                 </div>
                             </Link>

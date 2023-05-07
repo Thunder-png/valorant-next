@@ -33,7 +33,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
-  background-color: #161f36;
   text-align: center;
 }
 
@@ -44,13 +43,18 @@
 .card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
   max-height: 250px!important;
-  min-height: 230px;
+  min-height: 150px;
   object-fit: contain;
+}
+.CardHead{
+  background-color: #222942;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .card h3 {
