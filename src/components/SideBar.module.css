@@ -1,3 +1,4 @@
+@import url('http://fonts.cdnfonts.com/css/valorant');
 .sideNavbar {
     /* Kenar çubuğu için stiller */
     width: 12.5rem;
@@ -43,6 +44,8 @@
     font-size: 13.6px;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    font-family: 'VALORANT', sans-serif;
+
 }
   
 .submenu a:hover {
