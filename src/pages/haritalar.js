@@ -18,8 +18,9 @@ const HaritalarPage = () => {
     return (
         <div className="container">
             <TopBar />
+            <SideBar />
             <div className="row">
-                <SideBar />
+
                 <div className="col-md-9">
                     <h1 className="my-4">Haritalar</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
