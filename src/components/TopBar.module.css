@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'VALORANT';
+    font-style: normal;
+    font-weight: 400;
+    src: local('VALORANT'), url('https://fonts.cdnfonts.com/s/37505/Valorant Font.woff') format('woff');
+}
 .topBar {
     /* Üst çubuk için stiller */
     height: 4.375rem;
@@ -20,6 +26,8 @@
     color: white;
     text-decoration: none;
     background: transparent;
+    font-family: 'VALORANT', sans-serif!important;
+
 }
   
 .searchInput {
