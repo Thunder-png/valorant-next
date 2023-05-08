@@ -6,6 +6,26 @@ import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
 import styles from '../../components/Weapons.module.css';
 
+const replaceTurkishChars = (str) => {
+    if (!str) return str;
+
+    const turkishChars = {
+        'ç': 'c',
+        'ğ': 'g',
+        'ı': 'i',
+        'ö': 'o',
+        'ş': 's',
+        'ü': 'u',
+        'Ç': 'C',
+        'Ğ': 'G',
+        'İ': 'I',
+        'Ö': 'O',
+        'Ş': 'S',
+        'Ü': 'U',
+    };
+    return str.replace(/[çğıöşüÇĞİÖŞÜ]/g, (char) => turkishChars[char]);
+};
+
 const SilahlarSlugPage = () => {
     const router = useRouter();
     const { slug } = router.query;
@@ -16,7 +36,10 @@ const SilahlarSlugPage = () => {
             async function fetchData() {
                 const response = await fetch('https://api.valorantgame.com.tr/api/weapons?populate=*');
                 const data = await response.json();
-                const filteredWeapons = data.data.filter(weapon => weapon.attributes.weapon_name.toLowerCase().includes(slug.toLowerCase()));
+                const filteredWeapons = data.data.filter(weapon => {
+                    const weaponType = weapon.attributes.weapon_type;
+                    return weaponType && replaceTurkishChars(weaponType).toLowerCase().includes(replaceTurkishChars(slug).toLowerCase());
+                });
                 setWeapons(filteredWeapons);
             }
             fetchData();
