@@ -1,5 +1,6 @@
 // pages/silahlar/[slug].js
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
@@ -37,7 +38,7 @@ const SilahlarSlugPage = () => {
                     return (
                         <div key={weapon.id} className={styles.card}>
                             <a href={`/silahlar/${formattedTitle}`}>
-                                <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} />
+                                <Image src={weapon.attributes.weapon_img} width={300} height={180} priority={true} alt={weapon.attributes.weapon_name} />
                                 <div className={styles.CardHead}>
                                     <h3>{weapon.attributes.weapon_name}</h3>
                                 </div>
