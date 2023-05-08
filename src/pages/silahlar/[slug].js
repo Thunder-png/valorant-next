@@ -5,26 +5,32 @@ import { useEffect, useState } from 'react';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
 import styles from '../../components/Weapons.module.css';
+import redis from 'redis';
 
-const replaceTurkishChars = (str) => {
-    if (!str) return str;
+const client = redis.createClient();
 
-    const turkishChars = {
-        'ç': 'c',
-        'ğ': 'g',
-        'ı': 'i',
-        'ö': 'o',
-        'ş': 's',
-        'ü': 'u',
-        'Ç': 'C',
-        'Ğ': 'G',
-        'İ': 'I',
-        'Ö': 'O',
-        'Ş': 'S',
-        'Ü': 'U',
-    };
-    return str.replace(/[çğıöşüÇĞİÖŞÜ]/g, (char) => turkishChars[char]);
-};
+client.on('connect', () => {
+    console.log('Redis client connected');
+});
+
+client.on('error', (err) => {
+    console.log('Redis error:', err);
+});
+
+function cacheData(key, data, expirationInSeconds) {
+    client.set(key, JSON.stringify(data), 'EX', expirationInSeconds);
+}
+
+function getCachedData(key, callback) {
+    client.get(key, (error, result) => {
+        if (error) {
+            console.log(error);
+            callback(null);
+        } else {
+            callback(JSON.parse(result));
+        }
+    });
+}
 
 const SilahlarSlugPage = () => {
     const router = useRouter();
@@ -34,10 +40,19 @@ const SilahlarSlugPage = () => {
     useEffect(() => {
         if (slug) {
             async function fetchData() {
-                const formattedSlug = replaceTurkishChars(slug).toLowerCase();
-                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?populate=*&filters[weapon_type][$eqi]=${slug}`);
-                const data = await response.json();
-                setWeapons(data.data);
+                const cacheKey = `weapons-${slug}`;
+                const cachedWeapons = await new Promise((resolve) => {
+                    getCachedData(cacheKey, resolve);
+                });
+
+                if (cachedWeapons) {
+                    setWeapons(cachedWeapons);
+                } else {
+                    const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?populate=*&filters[weapon_type][$eqi]=${slug}`);
+                    const data = await response.json();
+                    setWeapons(data.data);
+                    cacheData(cacheKey, data.data, 60); // Önbelleğe alınan verileri 60 saniye sakla
+                }
             }
             fetchData();
         }
