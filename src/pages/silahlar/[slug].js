@@ -5,32 +5,6 @@ import { useEffect, useState } from 'react';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
 import styles from '../../components/Weapons.module.css';
-import redis from 'redis';
-
-const client = redis.createClient();
-
-client.on('connect', () => {
-    console.log('Redis client connected');
-});
-
-client.on('error', (err) => {
-    console.log('Redis error:', err);
-});
-
-function cacheData(key, data, expirationInSeconds) {
-    client.set(key, JSON.stringify(data), 'EX', expirationInSeconds);
-}
-
-function getCachedData(key, callback) {
-    client.get(key, (error, result) => {
-        if (error) {
-            console.log(error);
-            callback(null);
-        } else {
-            callback(JSON.parse(result));
-        }
-    });
-}
 
 const SilahlarSlugPage = () => {
     const router = useRouter();
@@ -40,9 +14,10 @@ const SilahlarSlugPage = () => {
     useEffect(() => {
         if (slug) {
             async function fetchData() {
-                const response = await fetch(`/api/weapons?slug=${slug}`);
+                /*const formattedSlug = replaceTurkishChars(slug).toLowerCase();*/
+                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?populate=*&filters[weapon_type][$eqi]=${slug}`);
                 const data = await response.json();
-                setWeapons(data);
+                setWeapons(data.data);
             }
             fetchData();
         }
