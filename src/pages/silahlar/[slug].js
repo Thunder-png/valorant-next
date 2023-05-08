@@ -40,19 +40,9 @@ const SilahlarSlugPage = () => {
     useEffect(() => {
         if (slug) {
             async function fetchData() {
-                const cacheKey = `weapons-${slug}`;
-                const cachedWeapons = await new Promise((resolve) => {
-                    getCachedData(cacheKey, resolve);
-                });
-
-                if (cachedWeapons) {
-                    setWeapons(cachedWeapons);
-                } else {
-                    const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?populate=*&filters[weapon_type][$eqi]=${slug}`);
-                    const data = await response.json();
-                    setWeapons(data.data);
-                    cacheData(cacheKey, data.data, 60); // Önbelleğe alınan verileri 60 saniye sakla
-                }
+                const response = await fetch(`/api/weapons?slug=${slug}`);
+                const data = await response.json();
+                setWeapons(data);
             }
             fetchData();
         }
