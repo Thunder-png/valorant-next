@@ -14,16 +14,13 @@ const SilahlarSlugPage = () => {
     useEffect(() => {
         if (slug) {
             async function fetchData() {
-                /*const formattedSlug = replaceTurkishChars(slug).toLowerCase();*/
-                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?populate=*&filters[weapon_type][$eqi]=${slug}`);
+                const response = await fetch(`/api/weapons?slug=${slug}`);
                 const data = await response.json();
-                setWeapons(data.data);
+                setWeapons(data);
             }
             fetchData();
         }
     }, [slug]);
-
-
 
     return (
         <div className={styles.container}>

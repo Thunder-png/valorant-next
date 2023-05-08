@@ -24,12 +24,13 @@ const KontratlarSlugPage = () => {
     return (
         <div className="container">
             <TopBar />
+            <h1 className="mb-4">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+
             <div className="row mt-4">
                 <div className="col-md-3">
                     <SideBar />
                 </div>
                 <div className="col-md-9">
-                    <h1 className="mb-4">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
                     {contract && (
                         <div>
                             <div className="d-flex align-items-center mb-4">
