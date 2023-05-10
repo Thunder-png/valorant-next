@@ -40,28 +40,28 @@ const MapPage = () => {
                                         <img src={attributes.map_img} className="card-img-top p-3 mb-3 mt-3 mx-auto w-10" alt={attributes.map_name} title={attributes.map_name} />
                                     </div>
                                     <div className="p-2">
-                                        <h4 className="h5 text-center c1 h6">Info</h4>
+                                        <h4 className="h5 text-center c1 h6">Bilgi</h4>
                                         <hr className="sidebar-divider" />
                                         <div className="d-flex">
-                                            <div className="p-1">Added</div>
+                                            <div className="p-1">Eklenme Tarihi</div>
                                             <div className="ml-auto p-2">
                                                 <span className="text-right"><small className="text-gray-400">{attributes.map_date}</small></span>
                                             </div>
                                         </div>
                                         <div className="d-flex">
-                                            <div className="p-1">Region / country</div>
+                                            <div className="p-1">Bölge / Ülke</div>
                                             <div className="ml-auto p-2">
                                                 <span className="text-right"><small className="text-gray-400">{attributes.map_region}</small></span>
                                             </div>
                                         </div>
                                         <div className="d-flex">
-                                            <div className="p-1">Coordinates:</div>
+                                            <div className="p-1">Koordinatlar:</div>
                                             <div className="ml-auto p-2">
                                                 <span className="text-right"><small className="text-gray-400">{attributes.map_coord}</small></span>
                                             </div>
                                         </div>
                                         <div className="d-flex">
-                                            <div className="p-1">Callsign:</div>
+                                            <div className="p-1">Kod adı:</div>
                                             <div className="ml-auto p-2">
                                                 <span className="text-right"><small className="text-gray-400">{attributes.map_call_sign}</small></span>
                                             </div>
@@ -73,7 +73,7 @@ const MapPage = () => {
                                             </div>
                                         </div>
                                         <div className="d-flex">
-                                            <div className="p-1">Rotation Status:</div>
+                                            <div className="p-1">Rotasyon Durumu:</div>
                                             <div className="ml-auto p-2">
                                                 <span className="text-right"><small className="text-gray-400">{attributes.map_rotation}</small></span>
                                             </div>
@@ -85,7 +85,7 @@ const MapPage = () => {
 
                         <div className="card mb-4">
                             <div className="card-header p-3">
-                                <h4 className="m-0 text-white h6">Map Theme</h4>
+                                <h4 className="m-0 text-white h6">Harita Teması</h4>
                             </div>
                             <div className="card-body text-center p-4">
                                 {attributes.map_theme_sound && (
@@ -100,7 +100,7 @@ const MapPage = () => {
                 </div>
                 <div className="col-xl-5">
                     <div className="card-header p-3">
-                        <h4 className="m-0 text-white h6">About the map</h4>
+                        <h4 className="m-0 text-white h6">Harita Hakkında</h4>
                     </div>
 
                     <div className="card mb-3 p-3">
