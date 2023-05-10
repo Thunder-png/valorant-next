@@ -169,9 +169,29 @@ const GlobalStyle = createGlobalStyle`
     }
     /*Ana Sayfa*/
     .card{
-      margin-bottom: 10px;
-      margin: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #172038;
+      background-clip: border-box;
+      border: none;
+      border-radius: 0.15rem;
+      box-shadow: -8px 12px 20px 0 #11151a!important;
   
+    }
+    .card-body{
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 0.5rem 1.25rem;
+      background-color: #161f36;
+    }
+    .card-header{
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: #15203c!important;
+      background-image: linear-gradient(135deg ,#161f37 0,#111726 100%)!important;
     }
     .card-deck {
       display: flex;

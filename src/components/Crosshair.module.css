@@ -11,7 +11,10 @@
   margin-top: 10px;
   border-style: groove;
   box-shadow: 0 8px 32px 0 rgba(54, 67, 255, 0.1);
+  min-width: 150px;
+  min-height: 150px;
 }
+
 .crosshairCard .clipboard{
   color:white;
   position: relative;

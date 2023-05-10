@@ -31,36 +31,91 @@ const MapPage = () => {
             <TopBar />
             <SideBar />
             <div className="row">
-
-
-
-                <div className="col-md-9">
+                <div className="col-xl-4">
                     <div className="mb-4">
-                        <h1>{attributes.map_name}</h1>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <img src={attributes.map_img} alt={attributes.map_name} className="img-fluid" />
+                        <div className="card mb-4 p-3">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="d-flex align-items-center">
+                                        <img src={attributes.map_img} className="card-img-top p-3 mb-3 mt-3 mx-auto w-10" alt={attributes.map_name} title={attributes.map_name} />
+                                    </div>
+                                    <div className="p-2">
+                                        <h4 className="h5 text-center c1 h6">Info</h4>
+                                        <hr className="sidebar-divider" />
+                                        <div className="d-flex">
+                                            <div className="p-1">Added</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_date}</small></span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex">
+                                            <div className="p-1">Region / country</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_region}</small></span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex">
+                                            <div className="p-1">Coordinates:</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_coord}</small></span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex">
+                                            <div className="p-1">Callsign:</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_call_sign}</small></span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex">
+                                            <div className="p-1">Spike Sites:</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_spike_site}</small></span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex">
+                                            <div className="p-1">Rotation Status:</div>
+                                            <div className="ml-auto p-2">
+                                                <span className="text-right"><small className="text-gray-400">{attributes.map_rotation}</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-md-6">
-                            <p className='textGray'>Çıkış Tarihi: <span className='textRight'>{attributes.map_date}</span></p>
-                            <p className='textGray'>Harita Bölgesi: <span className='textRight'>{attributes.map_region}</span></p>
-                            <p className='textGray'>Koordinatlar: <span className='textRight'>{attributes.map_coord}</span></p>
-                            <p className='textGray'>Kod Adı: <span className='textRight'>{attributes.map_call_sign}</span></p>
-                            <p className='textGray'>Spike Site: <span className='textRight'>{attributes.map_spike_site}</span></p>
-                            <p className='textGray'>Rotasyon: <span className='textRight'>{attributes.map_rotation}</span></p>
-                            <p className='textGray'>Harita Sesi: <span className='textRight'>{attributes.map_theme_sound && (
-                                <audio controls>
-                                    <source src={attributes.map_theme_sound} type="audio/mpeg" />
-                                    Your browser does not support the audio tag.
-                                </audio>
-                            )}</span></p>
+
+                        <div className="card mb-4">
+                            <div className="card-header p-3">
+                                <h4 className="m-0 text-white h6">Map Theme</h4>
+                            </div>
+                            <div className="card-body text-center p-4">
+                                {attributes.map_theme_sound && (
+                                    <audio controls>
+                                        <source src={attributes.map_theme_sound} type="audio/mpeg" />
+                                        Your browser does not support the audio tag.
+                                    </audio>
+                                )}
+                            </div>
                         </div>
                     </div>
-                    <div className="mt-4">
-                        <h2>About the Map</h2>
-                        <p>{attributes.map_description}</p>
-                        <img src={attributes.map_plan} alt={`${attributes.map_name} plan`} className="img-fluid" />
+                </div>
+                <div className="col-xl-5">
+                    <div className="card-header p-3">
+                        <h4 className="m-0 text-white h6">About the map</h4>
+                    </div>
+
+                    <div className="card mb-3 p-3">
+                        <div className="row">
+                            <div className="col-12 col-xxl-10 col-sm-9">
+                                <div className="p-2">
+                                    <h3 className="h5 text-center c1">{attributes.map_name}</h3>
+                                    <p className="small text-justify">
+                                        {attributes.map_description}
+                                    </p>
+                                    <hr className="sidebar-divider" />
+                                </div>
+                            </div>
+                        </div>
+                        <img className="mw-100" src={attributes.map_plan} alt={`${attributes.map_name} plan`} title={`${attributes.map_name} plan`} />
                     </div>
                 </div>
             </div>
