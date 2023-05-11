@@ -55,6 +55,7 @@ const KontratlarSlugPage = () => {
                                             <img src={card.card_img} alt={card.card_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{card.card_name}</h3>
+                                                <p className='card-tier'>Asama:{card.tier}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -65,6 +66,7 @@ const KontratlarSlugPage = () => {
                                             <img src={spray.spray_img} alt={spray.spray_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{spray.spray_name}</h3>
+                                                <p className='card-tier'>Asama:{spray.tier}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -75,6 +77,7 @@ const KontratlarSlugPage = () => {
                                             <img src={buddy.buddy_img} alt={buddy.buddy_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{buddy.buddy_name}</h3>
+                                                <p className='buddy-tier'>Asama:{buddy.tier}</p>
                                             </div>
                                         </div>
                                     </div>
