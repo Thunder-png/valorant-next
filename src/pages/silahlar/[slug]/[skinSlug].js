@@ -14,7 +14,8 @@ const SilahlarSkinSlugPage = () => {
     useEffect(() => {
         if (slug && skinSlug) {
             async function fetchData() {
-                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$eqi]=${skinSlug}&populate=*`);
+                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$eqi]=blastx&filters[weapon_name][$contains]=frenzy&populate=*
+                `);
                 const data = await response.json();
                 if (data && Array.isArray(data.data)) {
                     setWeapons(data.data);
