@@ -10,7 +10,7 @@ const SavasBiletiSlugPage = () => {
 
     useEffect(() => {
         async function fetchBattlepass() {
-            const response = await fetch('https://api.valorantgame.com.tr/api/battlepasses?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/battlepasses?populate=weapon_cards,weapon_cards.silahlars,battlepass_card,battlepass_spray,battlepass_buddy');
             const data = await response.json();
             const foundBattlepass = data.data.find(bp => bp.attributes.battlepass_name.replace(/ /g, '-').toLowerCase() === slug.toLowerCase());
             setBattlepass(foundBattlepass);
@@ -19,38 +19,41 @@ const SavasBiletiSlugPage = () => {
             fetchBattlepass();
         }
     }, [slug]);
-
     return (
         <div className="container">
             <TopBar />
-            <div className="row">
-                <div className="col-12">
-                    <h1 className="my-5">{slug ? slug.replace(/-/g, ' ') : 'Savaş Bileti'}</h1>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-lg-3">
+            <h1 className="mb-4">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+
+            <div className="row mt-4">
+                <div className="col-md-3">
                     <SideBar />
                 </div>
-                <div className="col-lg-9">
+                <div className="col-md-9">
                     {battlepass && (
                         <div>
-                            <div className="row mb-4">
-                                {Array(battlepass.attributes.rad_point).fill(0).map((_, index) => (
-                                    <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-4">
-                                        <div className="card text-center">
-                                            <img src="https://valorantfiles.com/images/currencies/e59aa87c-4cbf-517a-5983-6e81511be9b7/displayicon.png" alt="Rad Point" className="card-img-top" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">10 Rad Point</h3>
+                            <div className="d-flex align-items-center mb-4">
+                                <img src={battlepass.attributes.battlepass_img} alt={battlepass.attributes.battlepass_name} className="img-fluid" />
+                                <h2 className="ml-3">{battlepass.attributes.battlepass_name}</h2>
+                            </div>
+                            <div className="row">
+                                {battlepass.attributes.weapon_cards.map((weaponCard) => (
+                                    Array.isArray(weaponCard.silahlars.data) && weaponCard.silahlars.data.map((weapon) => (
+                                        <div key={weapon.id} className="col-md-4 col-sm-6 mb-3">
+                                            <div className="card">
+                                                <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} className="card-img-top" />
+                                                <div className="card-body">
+                                                    <h3 className="card-title">{weapon.attributes.weapon_name}</h3>
+                                                    <p className="card-text">{weapon.attributes.weapon_price}</p>
+                                                    <p className='card-tier'>Asama:{weaponCard.tier}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    ))
                                 ))}
-                            </div>
-                            <div className="row mb-4">
+
                                 {battlepass.attributes.battlepass_card.map((card) => (
-                                    <div key={card.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">
-                                        <div className="card text-center">
+                                    <div key={card.id} className="col-md-4 col-sm-6 mb-3">
+                                        <div className="card">
                                             <img src={card.card_img} alt={card.card_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{card.card_name}</h3>
@@ -59,11 +62,9 @@ const SavasBiletiSlugPage = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
-                            <div className="row mb-4">
                                 {battlepass.attributes.battlepass_spray.map((spray) => (
-                                    <div key={spray.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">
-                                        <div className="card text-center">
+                                    <div key={spray.id} className="col-md-4 col-sm-6 mb-3">
+                                        <div className="card">
                                             <img src={spray.spray_img} alt={spray.spray_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{spray.spray_name}</h3>
@@ -72,28 +73,13 @@ const SavasBiletiSlugPage = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
-                            <div className="row mb-4">
                                 {battlepass.attributes.battlepass_buddy.map((buddy) => (
-                                    <div key={buddy.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">
-                                        <div className="card text-center">
+                                    <div key={buddy.id} className="col-md-4 col-sm-6 mb-3">
+                                        <div className="card">
                                             <img src={buddy.buddy_img} alt={buddy.buddy_name} className="card-img-top" />
                                             <div className="card-body">
                                                 <h3 className="card-title">{buddy.buddy_name}</h3>
-                                                <p className='card-tier'>Asama:{buddy.tier}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="row mb-4">
-                                {battlepass.attributes.silahlars.data.map((weapon) => (
-                                    <div key={weapon.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">
-                                        <div className="card text-center">
-                                            <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} className="card-img-top" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">{weapon.attributes.weapon_name}</h3>
-                                                <p>{weapon.attributes.weapon_price} VP</p>
+                                                <p className='buddy-tier'>Asama:{buddy.tier}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -105,6 +91,8 @@ const SavasBiletiSlugPage = () => {
             </div>
         </div>
     );
+
+    // ... Geri kalan SavasBiletiSlugPage bileşeni kodu ...
 };
 
 export default SavasBiletiSlugPage;
