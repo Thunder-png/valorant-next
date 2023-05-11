@@ -11,7 +11,7 @@ const KontratlarSlugPage = () => {
 
     useEffect(() => {
         async function fetchContract() {
-            const response = await fetch('https://api.valorantgame.com.tr/api/contracts?populate=*');
+            const response = await fetch('https://api.valorantgame.com.tr/api/contracts?populate=weapon_cards,weapon_cards.silahlars,contract_card,contract_spray,contract_buddy');
             const data = await response.json();
             const foundContract = data.data.find(c => c.attributes.contract_name.replace(/ /g, '-').toLowerCase() === slug.toLowerCase());
             setContract(foundContract);
@@ -38,17 +38,21 @@ const KontratlarSlugPage = () => {
                                 <h2 className="ml-3">{contract.attributes.contract_name}</h2>
                             </div>
                             <div className="row">
-                                {contract.attributes.silahlars.data.map((weapon) => (
-                                    <div key={weapon.id} className="col-md-4 col-sm-6 mb-3">
-                                        <div className="card">
-                                            <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} className="card-img-top" />
-                                            <div className="card-body">
-                                                <h3 className="card-title">{weapon.attributes.weapon_name}</h3>
-                                                <p className="card-text">{weapon.attributes.weapon_price}</p>
+                                {contract.attributes.weapon_cards.map((weaponCard) => (
+                                    Array.isArray(weaponCard.silahlars.data) && weaponCard.silahlars.data.map((weapon) => (
+                                        <div key={weapon.id} className="col-md-4 col-sm-6 mb-3">
+                                            <div className="card">
+                                                <img src={weapon.attributes.weapon_img} alt={weapon.attributes.weapon_name} className="card-img-top" />
+                                                <div className="card-body">
+                                                    <h3 className="card-title">{weapon.attributes.weapon_name}</h3>
+                                                    <p className="card-text">{weapon.attributes.weapon_price}</p>
+                                                    <p className='card-tier'>Asama:{weaponCard.tier}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    ))
                                 ))}
+
                                 {contract.attributes.contract_card.map((card) => (
                                     <div key={card.id} className="col-md-4 col-sm-6 mb-3">
                                         <div className="card">
@@ -72,7 +76,7 @@ const KontratlarSlugPage = () => {
                                     </div>
                                 ))}
                                 {contract.attributes.contract_buddy.map((buddy) => (
-                                    <div key={buddy.id} className="col-md-4 col4 col-sm-6 mb-3">
+                                    <div key={buddy.id} className="col-md-4 col-sm-6 mb-3">
                                         <div className="card">
                                             <img src={buddy.buddy_img} alt={buddy.buddy_name} className="card-img-top" />
                                             <div className="card-body">
