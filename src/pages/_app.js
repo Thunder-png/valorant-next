@@ -98,7 +98,7 @@ const GlobalStyle = createGlobalStyle`
         color: white;
         background-color: transparent;
     }
-    h1 {
+    h1 h3 h4 h5 h6 {
       background: transparent;
     }
     footer {
@@ -111,6 +111,7 @@ const GlobalStyle = createGlobalStyle`
     h3{
       color:white;
       font-size: small;
+      background: transparent;
     }
     .align-items-center {
       align-items: center!important;
