@@ -32,7 +32,7 @@ const CardContainer = () => {
                                 width={200}
                                 height={300}
                                 priority={true}
-                                className="card-img-top"
+                                className="card-img-main"
                             />
                             <div className="card-body">
                                 <h5 className="card-title">{element.main_title}</h5>
