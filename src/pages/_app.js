@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width: 1400px){
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 
-      max-width: 1283px!important;
+      max-width: 1260px!important;
       }
     }
   

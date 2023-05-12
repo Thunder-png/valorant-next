@@ -18,7 +18,7 @@ const KontratlarPage = () => {
     return (
         <div className="container">
             <TopBar />
-            <div className="rowBattlepass">
+            <div className="row">
                 <SideBar />
                 <div className="col-xl-9">
                     <h1 className="my-4">Kontratlar</h1>
