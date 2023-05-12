@@ -28,9 +28,7 @@ const PaketlerSlugPage = () => {
         <div className="container">
             <TopBar />
             <div className="row">
-                <div className="col-3">
-                    <SideBar />
-                </div>
+                <SideBar />
                 <div className="col-9">
 
                     {bundle && (
@@ -64,8 +62,6 @@ const PaketlerSlugPage = () => {
                                             <h3 className="h7 card-title mc-1 m-1 p-1 mt-3 mb-2">{weapon.attributes.weapon_name}</h3>
                                             <p>{weapon.attributes.weapon_price}VP</p>
                                         </div>
-                                        <div className="cardBottomLine"></div>
-
                                     </div>
                                 ))}
                             </div>
@@ -74,7 +70,7 @@ const PaketlerSlugPage = () => {
                                     <div key={card.id} className="col-md-4 text-center mb-4">
                                         <img src={card.card_img} alt={card.card_name} className="img-fluid" />
                                         <h3>{card.card_name}</h3>
-                                        <div className="cardBottomLine"></div>
+
                                     </div>
                                 ))}
                             </div>
@@ -83,7 +79,7 @@ const PaketlerSlugPage = () => {
                                     <div key={spray.id} className="col-md-4 text-center mb-4">
                                         <img src={spray.spray_img} alt={spray.spray_name} className="img-fluid" />
                                         <h3>{spray.spray_name}</h3>
-                                        <div className="cardBottomLine"></div>
+
                                     </div>
                                 ))}
                             </div>
@@ -92,7 +88,6 @@ const PaketlerSlugPage = () => {
                                     <div key={buddy.id} className="col-md-4 text-center mb-4">
                                         <img src={buddy.buddy_img} alt={buddy.buddy_name} className="img-fluid" />
                                         <h3>{buddy.buddy_name}</h3>
-                                        <div className="cardBottomLine"></div>
                                     </div>
                                 ))}
                             </div>
