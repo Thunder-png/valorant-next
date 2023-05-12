@@ -34,12 +34,21 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 1.5rem!important;
     }
     .card-img, .card-img-top {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       border-top-left-radius: var(--bs-card-inner-border-radius);
       border-top-right-radius: var(--bs-card-inner-border-radius);
-      max-height: 250px!important;
-      min-height: 230px;
+      max-height: 100px!important;
+      min-height: 150px;
       object-fit: contain;
     }
+    .cardBottomLine {
+      width: 100%;
+      height: 5px;
+      background-color: red;
+    }
+    
     .img-fluid {
       max-width: 200px!important;
       height: auto;

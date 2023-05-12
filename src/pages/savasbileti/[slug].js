@@ -45,6 +45,8 @@ const SavasBiletiSlugPage = () => {
                                                     <h3 className="card-title">{weapon.attributes.weapon_name}</h3>
                                                     <p className="card-text">{weapon.attributes.weapon_price}</p>
                                                     <p className='card-tier'>Asama:{weaponCard.tier}</p>
+                                                    <div className='cardBottomLine '></div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -58,6 +60,8 @@ const SavasBiletiSlugPage = () => {
                                             <div className="card-body">
                                                 <h3 className="card-title">{card.card_name}</h3>
                                                 <p className='card-tier'>Asama:{card.tier}</p>
+                                                <div className='cardBottomLine '></div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -69,6 +73,7 @@ const SavasBiletiSlugPage = () => {
                                             <div className="card-body">
                                                 <h3 className="card-title">{spray.spray_name}</h3>
                                                 <p className='card-tier'>Asama:{spray.tier}</p>
+                                                <div className='cardBottomLine '></div>
                                             </div>
                                         </div>
                                     </div>
@@ -80,6 +85,7 @@ const SavasBiletiSlugPage = () => {
                                             <div className="card-body">
                                                 <h3 className="card-title">{buddy.buddy_name}</h3>
                                                 <p className='buddy-tier'>Asama:{buddy.tier}</p>
+                                                <div className='cardBottomLine '></div>
                                             </div>
                                         </div>
                                     </div>
