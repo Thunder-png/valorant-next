@@ -204,6 +204,7 @@ const GlobalStyle = createGlobalStyle`
       border: none;
       border-radius: 0.15rem;
       box-shadow: -8px 12px 20px 0 #11151a!important;
+      margin: 10px;
   
     }
     .card-body{
