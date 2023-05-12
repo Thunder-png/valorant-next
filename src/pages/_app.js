@@ -43,6 +43,21 @@ const GlobalStyle = createGlobalStyle`
       min-height: 150px;
       object-fit: contain;
     }
+    img.card-img-top {
+      border-top-left-radius: calc(0.35rem - 1px);
+      border-top-right-radius: calc(0.35rem - 1px);
+      max-width: 100%;
+      webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(3px 3px 6px #000);
+    }
+    .rowBattlepass{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 140px;
+      margin-left: -15px;
+    }
+
+
     .cardBottomLine {
       width: 100%;
       height: 5px;

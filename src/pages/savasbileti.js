@@ -6,7 +6,7 @@ const SavasBileti = ({ battlepasses }) => {
     return (
         <div className="container">
             <TopBar />
-            <div className="row">
+            <div className="rowBattlepass">
                 <SideBar />
                 <div className="col-md-9">
                     <h1 className="my-4">Savaş Bileti</h1>
@@ -15,7 +15,7 @@ const SavasBileti = ({ battlepasses }) => {
                             <div key={battlepass.id} className="col">
                                 <Link href={`/savasbileti/${battlepass.attributes.battlepass_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">
                                     <div className="card h-100">
-                                        <img src={battlepass.attributes.battlepass_img} alt={battlepass.attributes.battlepass_name} className="card-img-top" />
+                                        <img src={battlepass.attributes.battlepass_img} alt={battlepass.attributes.battlepass_name} className="card-img-battlepass" />
                                         <div className="card-body">
                                             <h3 className="card-title">{battlepass.attributes.battlepass_name}</h3>
                                         </div>
