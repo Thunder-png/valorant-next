@@ -18,11 +18,11 @@ const KontratlarPage = () => {
     return (
         <div className="container">
             <TopBar />
+            <h1 className="my-4">Kontratlar</h1>
             <div className="row">
                 <SideBar />
                 <div className="col-xl-9">
-                    <h1 className="my-4">Kontratlar</h1>
-                    <div className="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
+                    <div className="row row-cols-2 row-cols-sm-3 row-cols-sm-5 g-4">
                         {contracts.map((contract) => (
                             <div key={contract.id} className="col">
                                 <Link href={`/kontratlar/${contract.attributes.contract_name.replace(/ /g, '-').toLowerCase()}`} className="text-decoration-none text-dark">

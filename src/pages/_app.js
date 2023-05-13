@@ -33,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
       margin-top: 0rem!important;
       margin-bottom: 1.5rem!important;
     }
+    img.card-img-battlepass {
+      
+    }
     .card-img, .card-img-top {
       width: 100%;
       height: auto;
