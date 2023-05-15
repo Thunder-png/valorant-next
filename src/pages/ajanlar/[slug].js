@@ -2,7 +2,6 @@
 import { useRouter } from 'next/router';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
-import styles from '../../components/Agents.module.css';
 
 
 const AgentPage = ({ agent }) => {
