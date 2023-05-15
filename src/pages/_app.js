@@ -15,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
       max-width: 1260px!important;
       background-color: #111726;
 
-      }
     }
   
     .col-3, .col-md-3 {
