@@ -45,7 +45,7 @@ const AgentPage = ({ agent }) => {
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="background-agent">
-                                    <img loading="lazy" src={agentAttributes.agent_img} alt={`${agentAttributes.agent_name}`} class="card-img-top p-3" title={`${agentAttributes.agent_name}`} />
+                                    <img loading="lazy" src={agentAttributes.agent_img} alt={`${agentAttributes.agent_name}`} class="card-img-agent p-3" title={`${agentAttributes.agent_name}`} />
                                 </div>
                                 <h4 class="pt-3 pb-1 text-gray-400">{agentRole.agent_role}</h4>
                                 <p class="small text-justify pb-3">{agentRole.agent_role_description}.</p>

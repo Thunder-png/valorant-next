@@ -53,6 +53,11 @@ const GlobalStyle = createGlobalStyle`
       webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(3px 3px 6px #000);
     }
+    img.card-img-agent.p-3 {
+      max-width: 300px;
+      min-height: 500px;
+      object-fit: cover;
+    }
     .rowBattlepass{
       display: flex;
       flex-wrap: wrap;
@@ -225,6 +230,9 @@ const GlobalStyle = createGlobalStyle`
       padding-right: 260px;
       margin-right: 60px;
       margin-top: 10px;
+    }
+    h5.card-title {
+      background: transparent;
     }
     h4.pt-3.pb-1.text-gray-400 {
       background: transparent;
