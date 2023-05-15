@@ -4,6 +4,9 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+    *{
+      background-color: #111726;
+    }
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
       background-color: #111726;

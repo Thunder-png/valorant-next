@@ -1,7 +1,5 @@
 .container {
-    margin-left: 12.5rem; /* side-navbar genişliği kadar boşluk bırak */
-    background-color: #111726;
-
+  margin-left: 12.5rem; /* side-navbar genişliği kadar boşluk bırak */
 }
 .Label{
   background-color: #222942;
