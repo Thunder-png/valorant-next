@@ -131,7 +131,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: small;
       background: transparent;
     }
-
     .infoContainer {
       display: flex;
       justify-content: space-evenly;
