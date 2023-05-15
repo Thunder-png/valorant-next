@@ -4,27 +4,35 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    *{
-      background-color: #111726;
+    * {
+      background-color: #121827;
     }
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
-      background-color: #111726;
-
     }
     @media (min-width: 1400px){
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 
       max-width: 1260px!important;
-      background-color: #111726;
-
+      }
     }
   
     .col-3, .col-md-3 {
       flex: 0 0 auto;
       width: 0!important;
     }
-
+    .my-4{
+      background-color: #222942;
+      background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
+      color: #fff;
+      padding: 0.6rem 0;
+      border-radius: 25px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      margin-top: 0rem!important;
+      margin-bottom: 1.5rem!important;
+    }
     img.card-img-battlepass {
       
     }
@@ -38,13 +46,6 @@ const GlobalStyle = createGlobalStyle`
       min-height: 150px;
       object-fit: contain;
     }
-    img.card-img-ic {
-      border-top-left-radius: calc(0.35rem - 1px);
-      border-top-right-radius: calc(0.35rem - 1px);
-      max-width: 100%;
-      webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(3px 3px 6px #000);
-  }
     img.card-img-top {
       border-top-left-radius: calc(0.35rem - 1px);
       border-top-right-radius: calc(0.35rem - 1px);
@@ -130,6 +131,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: small;
       background: transparent;
     }
+    .align-items-center {
+      align-items: center!important;
+      min-height: 230px;
+    }
     .infoContainer {
       display: flex;
       justify-content: space-evenly;
@@ -140,14 +145,10 @@ const GlobalStyle = createGlobalStyle`
       border: 15px solid #0d1322;
     }
     body {
-      margin: 0;
-      font-family: Roboto,sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #93949d;
-      text-align: left;
-      background-color: #fff;
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        box-sizing: border-box;
     }
 
     *,
@@ -172,7 +173,7 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 1.5rem!important;
       margin-left: -6px;
     }
-    .h1-background{
+    .mb-4{
       background-color: #222942;
       background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
       color: #fff;
@@ -196,8 +197,18 @@ const GlobalStyle = createGlobalStyle`
     }
     /*Ana Sayfa*/
     .card{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
       background-color: #172038;
+      background-clip: border-box;
+      border: none;
+      border-radius: 0.15rem;
+      box-shadow: -8px 12px 20px 0 #11151a!important;
       margin: 10px;
+  
     }
     .card-body{
       flex: 1 1 auto;
