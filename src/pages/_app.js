@@ -196,18 +196,8 @@ const GlobalStyle = createGlobalStyle`
     }
     /*Ana Sayfa*/
     .card{
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      word-wrap: break-word;
       background-color: #172038;
-      background-clip: border-box;
-      border: none;
-      border-radius: 0.15rem;
-      box-shadow: -8px 12px 20px 0 #11151a!important;
       margin: 10px;
-  
     }
     .card-body{
       flex: 1 1 auto;
