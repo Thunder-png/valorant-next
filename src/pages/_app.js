@@ -226,6 +226,9 @@ const GlobalStyle = createGlobalStyle`
       margin-right: 60px;
       margin-top: 10px;
     }
+    h4.pt-3.pb-1.text-gray-400 {
+      background: transparent;
+    }
     @media screen and (max-width: 576px){
       .card-deck{
         display: flex;
