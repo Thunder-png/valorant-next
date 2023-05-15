@@ -21,18 +21,7 @@ const GlobalStyle = createGlobalStyle`
       flex: 0 0 auto;
       width: 0!important;
     }
-    .my-4{
-      background-color: #222942;
-      background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
-      color: #fff;
-      padding: 0.6rem 0;
-      border-radius: 25px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      margin-top: 0rem!important;
-      margin-bottom: 1.5rem!important;
-    }
+
     img.card-img-battlepass {
       
     }
@@ -148,10 +137,14 @@ const GlobalStyle = createGlobalStyle`
       border: 15px solid #0d1322;
     }
     body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        box-sizing: border-box;
+      margin: 0;
+      font-family: Roboto,sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #93949d;
+      text-align: left;
+      background-color: #fff;
     }
 
     *,
@@ -176,7 +169,7 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom: 1.5rem!important;
       margin-left: -6px;
     }
-    .mb-4{
+    .h1-background{
       background-color: #222942;
       background-image: linear-gradient(135deg, #222942 0, rgb(17, 23, 38) 50%);
       color: #fff;

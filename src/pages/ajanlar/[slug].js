@@ -18,7 +18,7 @@ const AgentPage = ({ agent }) => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="my-4">{agentAttributes.agent_name}</h1>
+            <h1 className="my-4 h1-background">{agentAttributes.agent_name}</h1>
             <div className="row">
                 <SideBar />
 
