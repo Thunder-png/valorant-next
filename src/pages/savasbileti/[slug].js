@@ -22,7 +22,7 @@ const SavasBiletiSlugPage = () => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="mb-4">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+            <h1 className="mb-4 h1-background">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
 
             <div className="row mt-4">
                 <div className="col-md-3">

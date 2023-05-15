@@ -9,7 +9,7 @@ const PaketlerPage = ({ bundles }) => {
             <div className="row">
                 <SideBar />
                 <div className="col-xl-9">
-                    <h1 className="my-4">Paketler</h1>
+                    <h1 className="my-4 h1-background">Paketler</h1>
                     <div className="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
                         {bundles.map((bundle) => {
                             const formattedTitle = bundle.attributes.bundle_name.toLowerCase().replace(/\s+/g, '');
