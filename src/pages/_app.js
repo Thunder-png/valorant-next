@@ -4,16 +4,17 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    * {
-      background-color: #121827;
-    }
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
+      background-color: #111726;
+
     }
     @media (min-width: 1400px){
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 
       max-width: 1260px!important;
+      background-color: #111726;
+
       }
     }
   
