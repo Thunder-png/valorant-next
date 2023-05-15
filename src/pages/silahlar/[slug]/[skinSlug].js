@@ -21,7 +21,7 @@ const SilahlarSkinSlugPage = () => {
 
                     // rakamları ve noktaları kaldırıyoruz
                     weaponTypeSlug = weaponTypeSlug.replace(/[0-9.]/g, '');
-                    const lastThreeLetters = skinSlug.slice(-3);
+                    const lastThreeLetters = skinSlug.slice(-4);
 
 
                     const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$containsi]=${lastThreeLetters}&filters[weapon_type][$containsi]=${weaponTypeSlug}&populate=*`);

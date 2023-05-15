@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import TopBar from '../components/TopBar';
 import SideBar from '../components/SideBar';
 import styles from '../components/Sesler.module.css';
 
 const Sesler = () => {
     const [voices, setVoices] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
         async function fetchData() {
@@ -16,36 +19,29 @@ const Sesler = () => {
     }, []);
 
     return (
-        <>
-            <div className={`container ${styles.container}`}>
-                <TopBar />
-                <SideBar />
-                <h1 className="my-4 h1-background">Sesler</h1>
-                <div className="rowVoices">
-                    {voices.map((voice) => (
+        <div className={`container ${styles.container}`}>
+            <TopBar />
+            <SideBar />
+            <h1 className="my-4 h1-background">Sesler</h1>
+            <div className="rowVoices">
+                {voices.map((voice) => {
+                    const slug = voice.attributes.agent_name.toLowerCase().replace(/\s+/g, '-');
+                    const q = '/sesler/'
+                    return (
                         <div key={voice.id} className="col-md-4">
-                            <div className={`card ${styles.card}`}>
-                                <img src={voice.attributes.agent_pic} className="card-img-top" alt={voice.attributes.agent_name} />
-                                <div className="card-body">
-                                    <h5 className="card-title">{voice.attributes.agent_name}</h5>
-                                    <div className={styles.textGray}>
-                                        Voice <span className={styles.textRight}>
-                                            {voice.attributes.voice_link && (
-                                                <audio controls>
-                                                    <source src={voice.attributes.voice_link} type="audio/mpeg" />
-                                                    Your browser does not support the audio tag.
-                                                </audio>
-                                            )}
-                                        </span>
-
+                            <Link href={`${q}${slug}`}>
+                                <div className={`card ${styles.card}`}>
+                                    <img src={voice.attributes.agent_pic} className="card-img-top" alt={voice.attributes.agent_name} />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{voice.attributes.agent_name}</h5>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
-                    ))}
-                </div>
+                    );
+                })}
             </div>
-        </>
+        </div>
     );
 };
 
