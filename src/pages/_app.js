@@ -131,10 +131,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: small;
       background: transparent;
     }
-    .align-items-center {
-      align-items: center!important;
-      min-height: 230px;
-    }
+
     .infoContainer {
       display: flex;
       justify-content: space-evenly;

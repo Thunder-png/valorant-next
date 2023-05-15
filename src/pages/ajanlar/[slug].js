@@ -55,7 +55,7 @@ const AgentPage = ({ agent }) => {
                             <div className="card mb-3 p-3" key={ability.id}>
                                 <div className="row">
                                     <div className="col-12 col-xxl-2 col-sm-3 text-center d-lg-flex align-items-center justify-content-between">
-                                        <img loading="lazy" src={abilityAttributes.abilty_icon} alt={abilityAttributes.abilty_name} className="card-img-ic" />
+                                        <img loading="lazy" src={abilityAttributes.abilty_icon} alt={abilityAttributes.abilty_name} className="card-img-top" />
                                     </div>
                                     <div className="col-12 col-xxl-10 col-sm-9">
                                         <div className="p-2">
