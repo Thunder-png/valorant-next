@@ -42,6 +42,32 @@ const AgentPage = ({ agent }) => {
                                 </div>
                             </div>
                         </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="background-agent">
+                                    <img loading="lazy" src={agentAttributes.agent_img} alt={`${agentAttributes.agent_name}`} class="card-img-top p-3" title={`${agentAttributes.agent_name}`} />
+                                </div>
+                                <h4 class="pt-3 pb-1 text-gray-400">{agentRole.agent_role}</h4>
+                                <p class="small text-justify pb-3">{agentRole.agent_role_description}.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header p-3">
+                                <h4 class="m-0 text-white h6">Seslendi̇rme</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <span>
+                                    {agentAttributes.agent_voice && (
+                                        <audio controls>
+                                            <source src={agentAttributes.agent_voice} type="audio/mpeg" />
+                                            Your browser does not support the audio tag.
+                                        </audio>
+                                    )}
+                                </span>
+                            </div>
+                        </div>
+
                         {/* More Cards Here */}
                     </div>
                 </div>
