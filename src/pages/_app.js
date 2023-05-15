@@ -46,6 +46,13 @@ const GlobalStyle = createGlobalStyle`
       min-height: 150px;
       object-fit: contain;
     }
+    img.card-img-ic {
+      border-top-left-radius: calc(0.35rem - 1px);
+      border-top-right-radius: calc(0.35rem - 1px);
+      max-width: 100%;
+      webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(3px 3px 6px #000);
+  }
     img.card-img-top {
       border-top-left-radius: calc(0.35rem - 1px);
       border-top-right-radius: calc(0.35rem - 1px);
@@ -130,10 +137,6 @@ const GlobalStyle = createGlobalStyle`
       color:white;
       font-size: small;
       background: transparent;
-    }
-    .align-items-center {
-      align-items: center!important;
-      min-height: 230px;
     }
     .infoContainer {
       display: flex;
