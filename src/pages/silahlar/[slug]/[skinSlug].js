@@ -48,30 +48,48 @@ const SilahlarSkinSlugPage = () => {
 
                     return (
                         <div key={weapon.id} className={styles.card}>
-                            <a href={`/silahlar/${formattedTitle}`}>
-                                <Image src={weapon.attributes.weapon_img} width={300} height={180} priority={true} alt={weapon.attributes.weapon_name} />
-                                <div className={styles.CardHead}>
-                                    <h3>{weapon.attributes.weapon_name}</h3>
-                                </div>
+                            <Image src={weapon.attributes.weapon_img} width={300} height={180} priority={true} alt={weapon.attributes.weapon_name} />
+                            <div className={styles.CardHead}>
+                                <h3>{weapon.attributes.weapon_name}</h3>
+                            </div>
 
-                                <div className={styles.cardBottomLine}>
-                                </div>
-                            </a>
-                            {weapon.attributes.weapon_video.length > 0 && (
-                                <div className={styles.videoContainer}>
-                                    <iframe
-                                        src={weapon.attributes.weapon_video[0].video_link}
-                                        width="%100"
-                                        height="%100"
-                                        allowFullScreen
-                                        title={weapon.attributes.weapon_name}
-                                    />
-                                </div>
-                            )}
+                            <div className={styles.cardBottomLine}></div>
+
                         </div>
                     );
                 })}
             </div>
+            <div className={styles.cardContainer}>
+                <div className={styles.cardContainer}>
+                    {weapons.map((weapon) => {
+                        return (
+                            <div key={weapon.id} className={styles.videocard}>
+                                {weapon.attributes.weapon_video.length > 0 && (
+                                    <div className={styles.videoContainer}>
+                                        <div className={styles.CardHead}>
+                                            <h3>{weapon.attributes.weapon_name}</h3>
+                                        </div>
+                                        <iframe
+                                            src={weapon.attributes.weapon_video[0].video_link}
+                                            width="980"
+                                            height="540"
+                                            allowFullScreen
+                                            title={weapon.attributes.weapon_name}
+                                        />
+                                    </div>
+                                )}
+
+                            </div>
+
+                        );
+                    })}
+
+
+                </div>
+
+            </div>
+
+
         </div>
     );
 };

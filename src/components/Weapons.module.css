@@ -74,6 +74,10 @@
   height: 5px;
   background-color: red;
 }
+.videocard{
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .cardContainer {
     display: flex;

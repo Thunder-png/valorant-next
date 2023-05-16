@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     * {
       background-color: #121827;
     }
+    iframe{
+      align: center;
+
+      
+    }
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
     }
