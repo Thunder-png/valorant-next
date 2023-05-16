@@ -15,22 +15,18 @@ const SilahlarSkinSlugPage = () => {
         if (slug && skinSlug) {
             async function fetchData() {
                 // skinSlug'un slug içinde olup olmadığını kontrol ediyoruz
-                if (slug.includes(skinSlug)) {
-                    // slug'dan skinSlug'u çıkarıyoruz ve yeni bir değişkene atıyoruz
-                    let weaponTypeSlug = slug.replace(skinSlug, '');
+                // slug'dan skinSlug'u çıkarıyoruz ve yeni bir değişkene atıyoruz
 
-                    // rakamları ve noktaları kaldırıyoruz
-                    weaponTypeSlug = weaponTypeSlug.replace(/[0-9.]/g, '');
-                    const lastThreeLetters = skinSlug.slice(-4);
+                // rakamları ve noktaları kaldırıyoruz
+                const lastThreeLetters = skinSlug.slice(-4);
 
 
-                    const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$containsi]=${lastThreeLetters}&filters[weapon_type][$containsi]=${weaponTypeSlug}&populate=*`);
-                    const data = await response.json();
-                    if (data && Array.isArray(data.data)) {
-                        setWeapons(data.data);
-                    } else {
-                        setWeapons([]);
-                    }
+                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$containsi]=${lastThreeLetters}&filters[weapon_type][$containsi]=${slug}&populate=*`);
+                const data = await response.json();
+                if (data && Array.isArray(data.data)) {
+                    setWeapons(data.data);
+                } else {
+                    setWeapons([]);
                 }
             }
             fetchData();
