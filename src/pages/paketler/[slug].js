@@ -37,6 +37,7 @@ const PaketlerSlugPage = () => {
                         <div>
                             <div className="d-flex align-items-center mb-4">
                                 {bundle && (
+
                                     <div>
                                         <div class="mb-4">
                                             <div class="text-center mb-2 card-ram p-3">
@@ -65,9 +66,7 @@ const PaketlerSlugPage = () => {
                                                                 </div>
                                                             </div>
                                                             <div class="d-flex">
-                                                                <div class="p-1">Battlepass:</div>
-
-                                                                <div class="ml-auto p-2">
+                                                                <div class="p-1">Battlepass:</div>                                                            <div class="ml-auto p-2">
                                                                     <span class="text-right"><small class="text-gray-400">{bundle.attributes.battlepass_opt}</small></span>
                                                                 </div>
                                                             </div>
@@ -90,17 +89,24 @@ const PaketlerSlugPage = () => {
                                                     </div>
                                                 </div>
                                             ))}
-                                            {bundle.attributes.bundle_card.map((card) => (
-                                                <div key={card.id} className="col-md-4 col-sm-6 mb-3">
-                                                    <div className="card">
-                                                        <img src={card.card_img} alt={card.card_name} className="card-img-top" />
-                                                        <div className="card-body">
-                                                            <h3 className="card-title">{card.card_name}</h3>
-                                                            <div className='cardBottomLine '></div>
-                                                        </div>
+                                            {bundle.attributes.bundle_card.map((card) => {
+                                                const formattedTitle = (card?.weapon_type?.toLowerCase().replace(/\s+/g, '')) || '';
+                                                const formattedSkinSlug = (card?.weapon_skin?.toLowerCase().replace(/\s+/g, '')) || '';
+
+                                                return (
+                                                    <div key={card.id} className="col-md-4 col-sm-6 mb-3">
+                                                        <a href={`/silahlar/${formattedTitle}/${formattedSkinSlug}`}>
+                                                            <div className="card">
+                                                                <img src={card.card_img} alt={card.card_name} className="card-img-top" />
+                                                                <div className="card-body">
+                                                                    <h3 className="card-title">{card.card_name}</h3>
+                                                                    <div className='cardBottomLine '></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
                                                     </div>
-                                                </div>
-                                            ))}
+                                                )
+                                            })}
                                             {bundle.attributes.bundle_spray.map((spray) => (
                                                 <div key={spray.id} className="col-md-4 col-sm-6 mb-3">
                                                     <div className="card">
@@ -139,4 +145,3 @@ const PaketlerSlugPage = () => {
 };
 
 export default PaketlerSlugPage;
-
