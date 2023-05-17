@@ -90,8 +90,8 @@ const PaketlerSlugPage = () => {
                                                 </div>
                                             ))}
                                             {bundle.attributes.bundle_card.map((card) => {
-                                                const formattedTitle = (card?.weapon_type?.toLowerCase().replace(/\s+/g, '')) || '';
-                                                const formattedSkinSlug = (card?.weapon_skin?.toLowerCase().replace(/\s+/g, '')) || '';
+                                                const formattedTitle = (card?.weapon_type?.toLowerCase().replace(/ /g, '-')) || '';
+                                                const formattedSkinSlug = (card?.weapon_skin?.toLowerCase().replace(/ /g, '-')) || '';
 
                                                 return (
                                                     <div key={card.id} className="col-md-4 col-sm-6 mb-3">
