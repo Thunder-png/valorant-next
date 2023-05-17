@@ -31,8 +31,8 @@ const SilahlarSlugPage = () => {
             <SideBar />
             <div className={styles.cardContainer}>
                 {weapons.map((weapon) => {
-                    const formattedTitle = weapon.attributes.weapon_type.toLowerCase().replace(/\s+/g, '');
-                    const formattedSkinSlug = weapon.attributes.weapon_skin.toLowerCase().replace(/\s+/g, '');
+                    const formattedTitle = weapon.attributes.weapon_type.replace(/ /g, '-').toLowerCase();
+                    const formattedSkinSlug = weapon.attributes.weapon_skin.replace(/ /g, '-').toLowerCase();
 
                     return (
                         <div key={weapon.id} className={styles.card}>

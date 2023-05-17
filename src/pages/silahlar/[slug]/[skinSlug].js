@@ -14,14 +14,11 @@ const SilahlarSkinSlugPage = () => {
     useEffect(() => {
         if (slug && skinSlug) {
             async function fetchData() {
-                // skinSlug'un slug içinde olup olmadığını kontrol ediyoruz
-                // slug'dan skinSlug'u çıkarıyoruz ve yeni bir değişkene atıyoruz
 
-                // rakamları ve noktaları kaldırıyoruz
-                const lastThreeLetters = skinSlug.slice(-4);
+                const formattedTitleWithSpaces = skinSlug.replace(/-/g, ' ');
 
 
-                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$endsWithi]=${lastThreeLetters}&filters[weapon_type][$containsi]=${slug}&populate=*`);
+                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$endsWithi]=${formattedTitleWithSpaces}&filters[weapon_type][$containsi]=${slug}&populate=*`);
                 const data = await response.json();
                 if (data && Array.isArray(data.data)) {
                     setWeapons(data.data);
