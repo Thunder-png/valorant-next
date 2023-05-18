@@ -97,10 +97,14 @@ const AgentPage = ({ agent }) => {
                                     </div>
                                 </div>
                                 {abilityAttributes.abilty_video && (
-                                    <video controls loop className="mw-100" title={abilityAttributes.abilty_name}>
-                                        <source src={abilityAttributes.abilty_video} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <iframe
+                                        src={abilityAttributes.abilty_video}
+                                        width="450"
+                                        height="240"
+                                        allowFullScreen
+                                        title={abilityAttributes.abilty_name}
+                                    />
+
                                 )}
                             </div>
                         );
