@@ -36,7 +36,7 @@ const Search = () => {
 
                     return (
                         <div key={item.attributes.id} className={styles.card}>
-                            <Link href={`/silahlar/${item.attributes.weapon_name.replace(/ /g, '-').toLowerCase()}`}>
+                            <Link href={`/silahlar/${item.attributes.weapon_type.toLowerCase().replace(/\s+/g, '')}/${item.attributes.weapon_skin.toLowerCase().replace(/\s+/g, '')}`}>
                                 <Image src={item.attributes.weapon_img} width={300} height={180} priority={true} alt={item.attributes.weapon_name} />
                                 <div className={styles.CardHead}>
                                     <h3>{item.attributes.weapon_name}</h3>
