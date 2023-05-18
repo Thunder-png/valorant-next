@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
 
       
     }
+    form {
+      background: transparent;
+    }
     .container {
       margin-left: 12.5rem!important; /* side-navbar genişliği kadar boşluk bırak */
     }
