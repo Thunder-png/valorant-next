@@ -36,7 +36,7 @@ const AgentPage = ({ agent }) => {
                                         <hr className="sidebar-divider" />
                                         <div className="small d-flex align-items-center justify-content-between text-gray-400">
                                             Bölge/ülke
-                                            <img loading="lazy" src={agentAttributes.agent_flag} width="20px" className="mr-2 align-top text-right" alt={agentAttributes.agent_country} />
+                                            <p className="mr-2 align-top text-right">{agentAttributes.agent_country}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ const AgentPage = ({ agent }) => {
                                 {abilityAttributes.abilty_video && (
                                     <iframe
                                         src={abilityAttributes.abilty_video}
-                                        width="450"
+                                        width="640"
                                         height="240"
                                         allowFullScreen
                                         title={abilityAttributes.abilty_name}

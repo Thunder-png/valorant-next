@@ -9,8 +9,14 @@ const GlobalStyle = createGlobalStyle`
     }
     iframe{
       align: center;
-
-      
+    }
+    .col-xl-4 {
+      flex: 0 0 40.333333%;
+      max-width: 60.333333%;
+    }
+    .col-xl-5 {
+      flex: 0 0 59.333333%;
+      max-width: 60.333333%;
     }
     form {
       background: transparent;
