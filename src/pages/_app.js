@@ -74,6 +74,11 @@ const GlobalStyle = createGlobalStyle`
       max-width: 300px;
       min-height: 500px;
       object-fit: cover;
+      text-align: center;
+    }
+    .background-agent {
+      display: flex;
+      justify-content: center;
     }
     .rowBattlepass{
       display: flex;
