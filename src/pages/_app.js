@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
       flex: 0 0 59.333333%;
       max-width: 60.333333%;
     }
+    span.c1 {
+      color: aqua;
+    }
     form {
       background: transparent;
     }
