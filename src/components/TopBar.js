@@ -21,7 +21,7 @@ const TopBar = () => {
 
 
     return (
-        <div className={styles.topBar}>
+        <div className={`${styles.topBar} ${styles.stickyTopBar}`}> {/* stickyTopBar sınıfını ekleyin. */}
             <div className={styles.hamburger} onClick={toggleSideBar}>
                 <div></div>
                 <div></div>
