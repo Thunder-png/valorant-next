@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
     span.c1 {
       color: aqua;
     }
+    a.breadcrumbLink{
+      font-family: 'Courier New', Courier, monospace!important;
+    }
+    span {
+      background: transparent;
+    }
     form {
       background: transparent;
     }

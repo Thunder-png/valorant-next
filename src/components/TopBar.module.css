@@ -16,6 +16,17 @@
     flex-wrap: wrap;
     justify-content: space-between; 
 }
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    background: transparent;
+    margin-left: 27vh;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace!important;
+}
+
 
 .logo {
     background-color: transparent;

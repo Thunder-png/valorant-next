@@ -11,6 +11,7 @@ import SideBarContext from '../components/SideBarContext';
 const TopBar = () => {
     const [query, setQuery] = useState('');
     const router = useRouter();
+    const paths = router.asPath.split("/").slice(1);
 
     const search = (e) => {
         e.preventDefault();
@@ -28,6 +29,19 @@ const TopBar = () => {
             </div>
             <div className={styles.logo}>
                 <Link href="/">ValorantGame</Link>
+            </div>
+            <div className={styles.breadcrumb}>
+                <Link className='breadcrumbLink' href="/">Ana Sayfa</Link>
+                {paths.map((path, index) => {
+                    const routePath = `/${paths.slice(0, index + 1).join('/')}`;
+                    const isLast = index === paths.length - 1;
+                    return (
+                        <span key={routePath}>
+                            {" > "}
+                            <Link className='breadcrumbLink' href={isLast ? router.asPath : routePath}>{path}</Link>
+                        </span>
+                    );
+                })}
             </div>
             <div className={styles.searchContainer}>
                 <form onSubmit={search}>
