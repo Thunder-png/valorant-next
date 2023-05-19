@@ -1,7 +1,10 @@
 // pages/_app.js
 import Head from 'next/head';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import SideBarContext from '../components/SideBarContext';
 import { createGlobalStyle } from 'styled-components';
+import React, { useState } from 'react';
+
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -31,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 
       max-width: 1260px!important;
+      }
+    }
+    @media (min-width: 768px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        margin-left: 1rem
       }
     }
   
@@ -259,6 +267,65 @@ const GlobalStyle = createGlobalStyle`
     h4.pt-3.pb-1.text-gray-400 {
       background: transparent;
     }
+    @font-face {
+      font-family: 'VALORANT';
+      font-style: normal;
+      font-weight: 400;
+      src: local('VALORANT'), url('https://fonts.cdnfonts.com/s/37505/Valorant Font.woff') format('woff');
+  }
+  .sideNavbar {
+      /* Kenar çubuğu için stiller */
+      width: 12.5rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: linear-gradient(72deg, #172038 10%, #10151e 100%);
+      padding-top: 50px;
+  }
+    
+  .navList {
+      /* Navigasyon listesi için stiller */
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+    
+  .menuTitle {
+      /* Menü başlığı için stiller */
+      color: #e74a3b;
+      text-transform: capitalize;
+      font-size: 1rem;
+      margin-left: 1rem;
+  }
+    
+  .submenu {
+      /* Alt menü için stiller */
+      list-style-type: none;
+      padding: 0;
+  }
+    
+  .sidebarDivider {
+      /* Kenar çubuğu bölücüsü için stiller */
+      border: none;
+      margin: 0 1rem 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .submenu a {
+      display: block;
+      color: #ccc;
+      font-size: 13.6px;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-family: 'VALORANT', sans-serif!important;
+  
+  }
+    
+  .submenu a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+  
     @media screen and (max-width: 576px){
       .card-deck{
         display: flex;
@@ -276,6 +343,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <Head>
@@ -286,7 +358,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <GlobalStyle />
-      <Component {...pageProps} />
+      <SideBarContext.Provider value={{ isOpen, toggleSideBar }}>
+        <Component {...pageProps} />
+      </SideBarContext.Provider>
+
     </>
   );
 }

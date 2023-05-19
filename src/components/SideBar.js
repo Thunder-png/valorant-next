@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState, useContext } from 'react';
 import FontAwesomeIcon from "./FontAwesomeIcon";
 import { faHouse, faNewspaper, faUserFriends, faCrosshairs, faLayerGroup, faMedal, faDollarSign, faHourglassClock, faMusic, faLocationCrosshairs, faMap, faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SideBar.module.css";
+import SideBarContext from '../components/SideBarContext';
+
 import Link from "next/link"; // Link bileşenini içe aktar
 
 const SideBar = () => {
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const { isOpen } = useContext(SideBarContext);  // add this line
+
     return (
-        <aside className={styles.sideNavbar}>
+        <aside className={`${styles.sideNavbar} ${isOpen ? styles.open : ''}`}>
             <nav>
                 <ul className={styles.navList}>
                     {/* Ana menü */}
