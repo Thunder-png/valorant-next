@@ -24,3 +24,27 @@
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-top: 10px;
+    flex-direction: column;
+  }
+  .container {
+    margin-left: 1rem; /* side-navbar genişliği kadar boşluk bırak */
+  }
+  .card {
+    width: 111%;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+  }
+}
