@@ -348,21 +348,21 @@ const GlobalStyle = createGlobalStyle`
 
 function MyApp({ Component, pageProps }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleSideBar = () => {
     setIsOpen(!isOpen);
   };
   return (
     <>
-      <Head>
-        <title>ValoranGameTr</title>
-        <meta name="description" content="Valorant Game valorant oyununa ait bilgileri bulabilrceğiniz bir web sitesi" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="../../public/favicon.ico" />
-      </Head>
-
-      <GlobalStyle />
       <SideBarContext.Provider value={{ isOpen, toggleSideBar }}>
+
+        <Head>
+          <title>ValoranGameTr</title>
+          <meta name="description" content="Valorant Game valorant oyununa ait bilgileri bulabilrceğiniz bir web sitesi" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="../../public/favicon.ico" />
+        </Head>
+
+        <GlobalStyle />
         <Component {...pageProps} />
       </SideBarContext.Provider>
 
