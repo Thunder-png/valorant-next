@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
       max-width: 1260px!important;
       }
     }
-    @media (min-width: 768px){
+    @media (max-width: 768px){
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         margin-left: 1rem
       }
