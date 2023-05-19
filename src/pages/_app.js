@@ -44,7 +44,19 @@ const GlobalStyle = createGlobalStyle`
     }
     @media (max-width: 768px){
       .container {
-        margin-left: 1rem
+        margin-left: 1rem!important;
+      }
+      .col-xl-4 {
+        -webkit-flex: 0 0 40.333333%;
+        -ms-flex: 0 0 40.333333%;
+        flex: 0 0 40.333333%;
+        max-width: 100.333333%;
+      }
+      .col-xl-5 {
+        -webkit-flex: 0 0 40.333333%;
+        -ms-flex: 0 0 40.333333%;
+        flex: 1 0 40.333333%;
+        max-width: 100.333333%;
       }
     }
   
