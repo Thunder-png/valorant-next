@@ -92,6 +92,7 @@
 
     .sideNavbar.open {
         transform: translateX(0);
+        z-index: 1;
     }
 
     .hamburger {
