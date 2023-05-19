@@ -38,7 +38,7 @@ const TopBar = () => {
                     return (
                         <span key={routePath}>
                             {" > "}
-                            <Link className='breadcrumbLink' href={isLast ? router.asPath : routePath}>{path}</Link>
+                            <Link className='breadcrumbLink' href={isLast ? router.asPath : routePath}>{decodeURIComponent(path)}</Link>
                         </span>
                     );
                 })}
