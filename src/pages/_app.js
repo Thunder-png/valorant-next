@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
       }
     }
     @media (max-width: 768px){
-      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      .container {
         margin-left: 1rem
       }
     }
@@ -330,6 +330,10 @@ const GlobalStyle = createGlobalStyle`
       .card-deck{
         display: flex;
         flex-direction: column;
+        padding-right: 1px;
+        margin-right: 1px;
+        align-content: center;
+        align-items: center;
 
       }
     }
