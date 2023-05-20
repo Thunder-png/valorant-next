@@ -376,7 +376,7 @@ function MyApp({ Component, pageProps }) {
       <SideBarContext.Provider value={{ isOpen, toggleSideBar }}>
 
         <Head>
-          <title>ValoranGameTr</title>
+          <title>ValorantGameTr</title>
           <meta name="description" content="Valorant Game valorant oyununa ait bilgileri bulabilrceğiniz bir web sitesi" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="../../public/favicon.ico" />
