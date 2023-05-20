@@ -4,7 +4,7 @@ import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
 import styles from '../components/Agents.module.css';
-
+import Breadcrumb from "../components/Breadcrumb";
 const AgentsPage = () => {
     const [agents, setAgents] = useState([]);
 
@@ -22,6 +22,7 @@ const AgentsPage = () => {
             <TopBar />
             <div className={styles.Label}>
                 <h1 className={styles.Title}>Ajanlar</h1>
+                <Breadcrumb />
             </div>
             <SideBar />
             <div className={styles.cardContainer}>

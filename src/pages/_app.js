@@ -345,6 +345,17 @@ const GlobalStyle = createGlobalStyle`
   .submenu a:hover {
       background-color: rgba(255, 255, 255, 0.1);
   }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    background: transparent;
+    margin-left: 98vh;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace!important;
+  }
+
   
     @media screen and (max-width: 576px){
       .card-deck{

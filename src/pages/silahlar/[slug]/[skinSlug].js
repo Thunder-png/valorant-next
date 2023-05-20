@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import TopBar from "../../../components/TopBar";
 import SideBar from "../../../components/SideBar";
 import styles from '../../../components/Weapons.module.css';
+import Breadcrumb from "../../../components/Breadcrumb";
 
 const SilahlarSkinSlugPage = () => {
     const router = useRouter();
@@ -37,6 +38,7 @@ const SilahlarSkinSlugPage = () => {
             <TopBar />
             <div className={styles.Label}>
                 <h1 className={styles.Title}>{slug ? slug.replace(/-/g, ' ') : 'Silahlar'}</h1>
+                <Breadcrumb />
             </div>
             <SideBar />
             <div className={styles.cardContainer}>

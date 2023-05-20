@@ -30,19 +30,6 @@ const TopBar = () => {
             <div className={styles.logo}>
                 <Link href="/">ValorantGame</Link>
             </div>
-            <div className={styles.breadcrumb}>
-                <Link className='breadcrumbLink' href="/">Ana Sayfa</Link>
-                {paths.map((path, index) => {
-                    const routePath = `/${paths.slice(0, index + 1).join('/')}`;
-                    const isLast = index === paths.length - 1;
-                    return (
-                        <span key={routePath}>
-                            {" > "}
-                            <Link className='breadcrumbLink' href={isLast ? router.asPath : routePath}>{decodeURIComponent(path)}</Link>
-                        </span>
-                    );
-                })}
-            </div>
             <div className={styles.searchContainer}>
                 <form onSubmit={search}>
                     <input
