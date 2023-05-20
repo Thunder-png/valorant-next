@@ -379,7 +379,7 @@ function MyApp({ Component, pageProps }) {
           <title>ValorantGameTr</title>
           <meta name="description" content="Valorant Game valorant oyununa ait bilgileri bulabilrceğiniz bir web sitesi" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="../../public/favicon.ico" />
+          <link rel="shortcut icon" type="image/png" href="/icons8-valorant-office-xs-16.png" />
         </Head>
 
         <GlobalStyle />
