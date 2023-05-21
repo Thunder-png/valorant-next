@@ -31,6 +31,7 @@ const SideBar = () => {
                     <li>
                         <h5 className={styles.menuTitle}>Oyun</h5>
                         <ul className={styles.submenu}>
+                            <li><Link href="/builder"><FontAwesomeIcon icon={faGun} /> Simülatör</Link></li>
                             <li><Link href="/ajanlar"><FontAwesomeIcon icon={faUserFriends} /> Ajanlar</Link></li>
                             <li><Link href="/silahlar"><FontAwesomeIcon icon={faCrosshairs} /> Silahlar</Link></li>
                             <li><Link href="/paketler"><FontAwesomeIcon icon={faLayerGroup} /> Koleksiyon</Link></li>
@@ -39,7 +40,6 @@ const SideBar = () => {
                             <li><Link href="/sesler"><FontAwesomeIcon icon={faMusic} /> Oyuncu Sesleri</Link></li>
                             <li><Link href="/crosshair"><FontAwesomeIcon icon={faLocationCrosshairs} /> Crosshair</Link></li>
                             <li><Link href="/haritalar"><FontAwesomeIcon icon={faMap} /> Haritalar</Link></li>
-                            <li><Link href="/builder"><FontAwesomeIcon icon={faGun} /> Builder</Link></li>
                         </ul>
                         <hr className={styles.sidebarDivider} />
                     </li>
