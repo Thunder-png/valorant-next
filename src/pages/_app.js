@@ -356,7 +356,7 @@ const GlobalStyle = createGlobalStyle`
     gap: 8px;
     color: #ccc;
     background: transparent;
-    margin-left: 98vh;
+    margin-left: 64vh;
     font-size: small;
     font-family: 'Courier New', Courier, monospace!important;
   }

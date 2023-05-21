@@ -32,7 +32,7 @@ const PaketlerSlugPage = () => {
             <SideBar />
             {bundle && (
                 <div class="Label">
-                    <h1 className="mb-4 h1-background">{bundle.attributes.bundle_name}</h1>
+                    <h5 className="mb-4 h1-background">{bundle.attributes.bundle_name}</h5>
                     <Breadcrumb />
                 </div>
             )}
