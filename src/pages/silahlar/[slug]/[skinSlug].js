@@ -19,7 +19,7 @@ const SilahlarSkinSlugPage = () => {
                 const formattedTitleWithSpaces = skinSlug.replace(/-/g, ' ');
 
 
-                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$containsi]=${formattedTitleWithSpaces}&filters[weapon_type][$containsi]=${slug}&populate=*`);
+                const response = await fetch(`https://api.valorantgame.com.tr/api/weapons?filters[weapon_skin][$eqi]=${formattedTitleWithSpaces}&filters[weapon_type][$containsi]=${slug}&populate=*`);
                 const data = await response.json();
                 if (data && Array.isArray(data.data)) {
                     setWeapons(data.data);
