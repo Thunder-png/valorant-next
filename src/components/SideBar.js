@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import FontAwesomeIcon from "./FontAwesomeIcon";
-import { faHouse, faNewspaper, faUserFriends, faCrosshairs, faLayerGroup, faMedal, faDollarSign, faHourglassClock, faMusic, faLocationCrosshairs, faMap, faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faNewspaper, faUserFriends, faCrosshairs, faLayerGroup, faMedal, faDollarSign, faGun, faMusic, faLocationCrosshairs, faMap, faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import styles from "./SideBar.module.css";
 import SideBarContext from '../components/SideBarContext';
 
@@ -39,6 +39,7 @@ const SideBar = () => {
                             <li><Link href="/sesler"><FontAwesomeIcon icon={faMusic} /> Oyuncu Sesleri</Link></li>
                             <li><Link href="/crosshair"><FontAwesomeIcon icon={faLocationCrosshairs} /> Crosshair</Link></li>
                             <li><Link href="/haritalar"><FontAwesomeIcon icon={faMap} /> Haritalar</Link></li>
+                            <li><Link href="/builder"><FontAwesomeIcon icon={faGun} /> Builder</Link></li>
                         </ul>
                         <hr className={styles.sidebarDivider} />
                     </li>
