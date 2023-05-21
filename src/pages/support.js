@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
-import Breadcrumb from "../components/Breadcrumb";
 
 const SupportPage = () => {
     return (
@@ -35,7 +34,7 @@ const SupportPage = () => {
                             <p class="text-gray-200">Web sitemizde bir hata mı buldunuz?</p>
                             <p class="text-gray-200"> Web sitemizle ilgili bir sorunuz mu var?</p>
                             <p class="text-gray-100"><b>BİZE YAZIN, TR OR EN!</b></p>
-                            <p class="h3"><code>example@gmail.com</code></p>
+                            <p class="h3"><code>infovalorantgame@gmail.com</code></p>
 
 
                         </div>
