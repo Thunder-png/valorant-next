@@ -20,7 +20,7 @@ const PaketlerPage = () => {
         <div className="container">
             <TopBar />
             <div class="Label h1-background my-4">
-                <h1 className="h1-background">Koleksiyonlar </h1>
+                <h1 className="h1-background h5.card-title  ">Koleksiyonlar </h1>
                 <Breadcrumb />
             </div>
             <div className="row">
