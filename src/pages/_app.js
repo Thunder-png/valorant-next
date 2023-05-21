@@ -11,9 +11,8 @@ const GlobalStyle = createGlobalStyle`
       background-color: #121827;
     }
     iframe{
-      width= 640;
-      height= 240;
-      align: center;
+      display: flex;
+      text-align: center;
     }
     .col-xl-4 {
       flex: 0 0 40.333333%;

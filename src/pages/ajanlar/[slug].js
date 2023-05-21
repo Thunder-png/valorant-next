@@ -97,11 +97,11 @@ const AgentPage = ({ agent }) => {
                                     </div>
                                 </div>
                                 {abilityAttributes.abilty_video && (
-                                    <iframe
+                                    <iframe className='mw-100'
                                         src={abilityAttributes.abilty_video}
                                         allowFullScreen
-                                        width="100%"
-                                        height="100%"
+                                        width="640"
+                                        height="400"
                                         title={abilityAttributes.abilty_name}
                                     />
 
