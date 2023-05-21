@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
+import Breadcrumb from "../../components/Breadcrumb";
+
 
 const SavasBiletiSlugPage = () => {
     const router = useRouter();
@@ -22,7 +24,11 @@ const SavasBiletiSlugPage = () => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="mb-4 h1-background">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+            <div class="Label">
+                <h1 className="mb-4 h1-background">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+                <Breadcrumb />
+            </div>
+
 
             <div className="row mt-4">
                 <div className="col-md-3">

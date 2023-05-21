@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
-
+import Breadcrumb from "../../components/Breadcrumb";
 
 const AgentPage = ({ agent }) => {
     const router = useRouter();
@@ -18,7 +18,10 @@ const AgentPage = ({ agent }) => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="my-4 h1-background">{agentAttributes.agent_name}</h1>
+            <div class="Label">
+                <h1 className="my-4 h1-background">{agentAttributes.agent_name}</h1>
+                <Breadcrumb />
+            </div>
             <div className="row">
                 <SideBar />
 

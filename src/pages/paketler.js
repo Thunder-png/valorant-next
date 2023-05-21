@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import TopBar from '../components/TopBar';
 import SideBar from '../components/SideBar';
+import Breadcrumb from "../components/Breadcrumb";
 
 const PaketlerPage = () => {
     const [bundles, setBundles] = useState([]);
@@ -18,7 +19,10 @@ const PaketlerPage = () => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="my-4 h1-background">Koleksiyonlar</h1>
+            <div class="Label h1-background my-4">
+                <h1 className="h1-background">Koleksiyonlar </h1>
+                <Breadcrumb />
+            </div>
             <div className="row">
                 <SideBar />
                 <div className="row row-cols-2 row-cols-sm-3 row-cols-sm-5 g-4">

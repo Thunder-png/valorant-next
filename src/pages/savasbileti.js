@@ -1,12 +1,18 @@
 import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
 import SideBar from "../components/SideBar";
+import Breadcrumb from "../components/Breadcrumb";
+
 
 const SavasBileti = ({ battlepasses }) => {
     return (
         <div className="container">
             <TopBar />
-            <h1 className="my-4 h1-background">Savaş Bileti</h1>
+            <div class="Label">
+                <h1 className="my-4 h1-background">Savaş Bileti</h1>
+                <Breadcrumb />
+            </div>
+
             <div className="row">
                 <SideBar />
                 <div className="row row-cols-2 row-cols-sm-3 row-cols-sm-5 g-4">

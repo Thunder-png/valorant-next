@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import TopBar from "../../components/TopBar";
 import SideBar from "../../components/SideBar";
+import Breadcrumb from "../../components/Breadcrumb";
+
 
 const PaketlerSlugPage = () => {
     const router = useRouter();
@@ -29,7 +31,10 @@ const PaketlerSlugPage = () => {
             <TopBar />
             <SideBar />
             {bundle && (
-                <h1 className="mb-4 h1-background">{bundle.attributes.bundle_name}</h1>
+                <div class="Label">
+                    <h1 className="mb-4 h1-background">{bundle.attributes.bundle_name}</h1>
+                    <Breadcrumb />
+                </div>
             )}
             <div className="row mt-4">
                 <div className="col-md-9">

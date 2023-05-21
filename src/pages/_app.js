@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     nav {
       background: transparent;
     }
+    .Label{
+      display: flex;
+    }
     .col-xl-4 {
       flex: 0 0 40.333333%;
       max-width: 60.333333%;
