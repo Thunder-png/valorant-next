@@ -1,4 +1,4 @@
-// pages/ajanlar.js
+// pages/support.js
 import { useEffect, useState } from 'react';
 import Link from "next/link"; // Link bileşenini içe aktar
 import TopBar from "../components/TopBar";
