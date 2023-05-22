@@ -25,8 +25,8 @@ const KontratlarSlugPage = () => {
     return (
         <div className="container">
             <TopBar />
-            <div class="Label">
-                <h1 className="mb-4 h1-background">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
+            <div class="Label my-4">
+                <h1 className="h1-background">{slug ? slug.replace(/-/g, ' ') : 'Kontratlar'}</h1>
                 <Breadcrumb />
             </div>
 
