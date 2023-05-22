@@ -7,7 +7,7 @@ import SideBar from "../components/SideBar";
 const BuilderPage = () => {
     return (
         <div className="container-builder">
-            <div className="row">
+            <div className="row-builder">
                 <iframe className='mw-100'
                     src="https://valo-build.netlify.app/builder.html"
                     allowFullScreen
