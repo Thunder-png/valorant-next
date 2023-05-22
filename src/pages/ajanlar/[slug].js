@@ -18,8 +18,8 @@ const AgentPage = ({ agent }) => {
     return (
         <div className="container">
             <TopBar />
-            <div class="Label">
-                <h1 className="my-4">{agentAttributes.agent_name}</h1>
+            <div class="Label my-4">
+                <h1 className="h1-background">{agentAttributes.agent_name}</h1>
                 <Breadcrumb />
             </div>
             <div className="row">
