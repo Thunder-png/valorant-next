@@ -30,6 +30,7 @@ const MapPage = () => {
         <div className="container">
             <TopBar />
             <SideBar />
+            <h1 className="my-4">{attributes.map_name}</h1>
             <div className="row">
                 <div className="col-xl-4">
                     <div className="mb-4">

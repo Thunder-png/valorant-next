@@ -8,8 +8,8 @@ const SavasBileti = ({ battlepasses }) => {
     return (
         <div className="container">
             <TopBar />
-            <div class="Label">
-                <h1 className="my-4 h1-background">Savaş Bileti</h1>
+            <div class="Label my-4">
+                <h1 className="h1-background">Savaş Bileti</h1>
                 <Breadcrumb />
             </div>
 

@@ -19,7 +19,7 @@ const HaritalarPage = () => {
         <div className="container">
             <TopBar />
             <SideBar />
-            <h1 className="my-4 h1-background">Haritalar</h1>
+            <h1 className="my-4">Haritalar</h1>
             <div className="row">
                 <div className="row row-cols-2 row-cols-sm-3 row-cols-sm-5 g-4">
                     {maps.map((map) => (

@@ -28,7 +28,7 @@ const SesSlugPage = () => {
             <TopBar />
             <SideBar />
             <div className="d-sm-flex align-items-center justify-content-between mb-3 h1-background">
-                <h1 className="h5 mb-0 ml-3">Ses hatları // {voice.attributes && voice.attributes.agent_name}</h1>
+                <h1 className="my-4">Ses hatları // {voice.attributes && voice.attributes.agent_name}</h1>
             </div>
             <div className="row">
                 <div className="col-xl-6">

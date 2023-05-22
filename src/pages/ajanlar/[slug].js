@@ -19,7 +19,7 @@ const AgentPage = ({ agent }) => {
         <div className="container">
             <TopBar />
             <div class="Label">
-                <h1 className="my-4 h1-background">{agentAttributes.agent_name}</h1>
+                <h1 className="my-4">{agentAttributes.agent_name}</h1>
                 <Breadcrumb />
             </div>
             <div className="row">

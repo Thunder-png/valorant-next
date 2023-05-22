@@ -179,6 +179,9 @@ const GlobalStyle = createGlobalStyle`
     h1 h3 h4 h5 h6 {
       background: transparent;
     }
+    .h1-background{
+      background: transparent;
+    }
     footer {
       margin-left: 12.5rem;
     }
