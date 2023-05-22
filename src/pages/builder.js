@@ -11,6 +11,7 @@ const BuilderPage = () => {
                 <iframe className='mw-100'
                     src="https://valo-build.netlify.app/builder.html"
                     allowFullScreen
+                    frameBorder='no'
                     width="1580px"
                     height="800px"
                     title="Builder"
